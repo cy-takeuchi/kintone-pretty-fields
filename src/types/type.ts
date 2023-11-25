@@ -16,157 +16,157 @@ import {
   UserSelect,
   OrganizationSelect,
   GroupSelect,
-  Group,
+  // Group,
   Date,
   Time,
   DateTime,
   Link,
   File,
   Lookup,
-  Subtable,
+  // Subtable,
   ReferenceTable,
   Category,
   Status,
   StatusAssignee,
-  InSubtable,
-  OneOf,
+  // InSubtable,
+  // OneOf,
 } from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/property";
 
-interface PrettyRecordNumber extends RecordNumber {
+export interface PrettyRecordNumber extends RecordNumber {
   // table?: string;
   group?: string;
 }
 
-interface PrettyCreator extends Creator {
+export interface PrettyCreator extends Creator {
   // table?: string;
   group?: string;
 }
 
-interface PrettyCreatedTime extends CreatedTime {
+export interface PrettyCreatedTime extends CreatedTime {
   // table?: string;
   group?: string;
 }
 
-interface PrettyModifier extends Modifier {
+export interface PrettyModifier extends Modifier {
   // table?: string;
   group?: string;
 }
 
-interface PrettyUpdatedTime extends UpdatedTime {
+export interface PrettyUpdatedTime extends UpdatedTime {
   // table?: string;
   group?: string;
 }
 
-interface PrettySingleLineText extends SingleLineText {
+export interface PrettySingleLineText extends SingleLineText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyMultiLineText extends MultiLineText {
+export interface PrettyMultiLineText extends MultiLineText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyRichText extends RichText {
+export interface PrettyRichText extends RichText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyNumber extends Number {
+export interface PrettyNumber extends Number {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyCalc extends Calc {
+export interface PrettyCalc extends Calc {
   table?: string;
   group?: string;
 }
 
-interface PrettyCheckBox extends CheckBox {
+export interface PrettyCheckBox extends CheckBox {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-interface PrettyRadioButton extends RadioButton {
+export interface PrettyRadioButton extends RadioButton {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-interface PrettyMultiSelect extends MultiSelect {
+export interface PrettyMultiSelect extends MultiSelect {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-interface PrettyDropdown extends Dropdown {
+export interface PrettyDropdown extends Dropdown {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-interface PrettyUserSelect extends UserSelect {
+export interface PrettyUserSelect extends UserSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyOrganizationSelect extends OrganizationSelect {
+export interface PrettyOrganizationSelect extends OrganizationSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyGroupSelect extends GroupSelect {
+export interface PrettyGroupSelect extends GroupSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyDate extends Date {
+export interface PrettyDate extends Date {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyTime extends Time {
+export interface PrettyTime extends Time {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyDateTime extends DateTime {
+export interface PrettyDateTime extends DateTime {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyLink extends Link {
+export interface PrettyLink extends Link {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-interface PrettyFile extends File {
+export interface PrettyFile extends File {
   table?: string;
   group?: string;
 }
 
-interface PrettyLookup extends Lookup {
+export interface PrettyLookup extends Lookup {
   table?: string;
   group?: string;
 }
 
-type PrettySubtable<
+export type PrettySubtable<
   T extends {
     [fieldCode: string]: PrettyInSubtable;
   },
@@ -178,7 +178,7 @@ type PrettySubtable<
   fields: T;
 };
 
-type PrettyGroup<
+export type PrettyGroup<
   T extends {
     [fieldCode: string]: PrettyInGroup;
   },
@@ -191,27 +191,27 @@ type PrettyGroup<
   fields: T;
 };
 
-interface PrettyReferenceTable extends ReferenceTable {
+export interface PrettyReferenceTable extends ReferenceTable {
   // table?: string;
   group?: string;
 }
 
-interface PrettyCategory extends Category {
+export interface PrettyCategory extends Category {
   // table?: string;
   // group?: string;
 }
 
-interface PrettyStatus extends Status {
+export interface PrettyStatus extends Status {
   // table?: string;
   // group?: string;
 }
 
-interface PrettyStatusAssignee extends StatusAssignee {
+export interface PrettyStatusAssignee extends StatusAssignee {
   // table?: string;
   // group?: string;
 }
 
-type PrettyInSubtable =
+export type PrettyInSubtable =
   | PrettySingleLineText
   | PrettyNumber
   | PrettyCalc
@@ -231,7 +231,7 @@ type PrettyInSubtable =
   | PrettyGroupSelect
   | PrettyLookup;
 
-type PrettyInGroup =
+export type PrettyInGroup =
   | PrettyRecordNumber
   | PrettyCreator
   | PrettyCreatedTime
@@ -257,7 +257,7 @@ type PrettyInGroup =
   | PrettyReferenceTable
   | PrettyLookup;
 
-type PrettyOneOf =
+export type PrettyOneOf =
   | PrettyRecordNumber
   | PrettyCreator
   | PrettyCreatedTime

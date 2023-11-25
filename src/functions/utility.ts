@@ -3,28 +3,8 @@ import { AppID, Lang, Layout, Properties } from "@kintone/rest-api-client/lib/sr
 import { Spacer } from "@kintone/rest-api-client/lib/src/KintoneFields/types/fieldLayout";
 
 import { guardFormField, guardFormLayout } from "kintone-typeguard";
-import * as guardPrettyField from "./formField";
 
-import {
-  PrettyCheckBox,
-  PrettyDate,
-  PrettyDateTime,
-  PrettyDropdown,
-  PrettyGroupSelect,
-  PrettyInGroup,
-  PrettyInSubtable,
-  PrettyLink,
-  PrettyMultiLineText,
-  PrettyMultiSelect,
-  PrettyNumber,
-  PrettyOneOf,
-  PrettyOrganizationSelect,
-  PrettyRadioButton,
-  PrettyRichText,
-  PrettySingleLineText,
-  PrettyTime,
-  PrettyUserSelect,
-} from "../types/type";
+import { kintonePrettyFields, kintonePrettyType } from "../index";
 
 const sortOptions = (options: {
   [optionName: string]: {
@@ -37,7 +17,7 @@ const sortOptions = (options: {
     .map(({ label }) => label);
 
 const generateFields = (formFields: Properties, formLayouts: Layout) => {
-  const fields: PrettyOneOf[] = [];
+  const fields: kintonePrettyType.PrettyOneOf[] = [];
   const spacers: Spacer[] = [];
 
   const statusFormField = Object.values(formFields).find(guardFormField.isStatus);
@@ -87,7 +67,7 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
       // Subtableではない可能性はゼロだが、type error回避のため
       if (!guardFormField.isSubtable(formField)) continue;
 
-      const subField: { [fieldCode: string]: PrettyInSubtable } = {};
+      const subField: { [fieldCode: string]: kintonePrettyType.PrettyInSubtable } = {};
       for (const { code: subFieldCode } of formLayout.fields) {
         const subFormField = formField.fields[subFieldCode];
         if (
@@ -115,7 +95,7 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
       // Groupではない可能性はゼロだが、type error回避のため
       if (!guardFormField.isGroup(formField)) continue;
 
-      const subField: { [fieldCode: string]: PrettyInGroup } = {};
+      const subField: { [fieldCode: string]: kintonePrettyType.PrettyInGroup } = {};
       for (const formRow of formLayout.layout) {
         for (const field of formRow.fields) {
           if (guardFormLayout.isLabel(field) || guardFormLayout.isHr(field)) {
@@ -168,36 +148,36 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
             (
               field,
             ): field is
-              | PrettySingleLineText
-              | PrettyNumber
-              | PrettyMultiLineText
-              | PrettyRichText
-              | PrettyLink
-              | PrettyCheckBox
-              | PrettyRadioButton
-              | PrettyDropdown
-              | PrettyMultiSelect
-              | PrettyDate
-              | PrettyTime
-              | PrettyDateTime
-              | PrettyUserSelect
-              | PrettyOrganizationSelect
-              | PrettyGroupSelect =>
-              guardPrettyField.isSingleLineText(field) ||
-              guardPrettyField.isNumber(field) ||
-              guardPrettyField.isMultiLineText(field) ||
-              guardPrettyField.isRichText(field) ||
-              guardPrettyField.isLink(field) ||
-              guardPrettyField.isCheckBox(field) ||
-              guardPrettyField.isRadioButton(field) ||
-              guardPrettyField.isDropDown(field) ||
-              guardPrettyField.isMultiSelect(field) ||
-              guardPrettyField.isDate(field) ||
-              guardPrettyField.isTime(field) ||
-              guardPrettyField.isDatetime(field) ||
-              guardPrettyField.isUserSelect(field) ||
-              guardPrettyField.isOrganizationSelect(field) ||
-              guardPrettyField.isGroupSelect(field),
+              | kintonePrettyType.PrettySingleLineText
+              | kintonePrettyType.PrettyNumber
+              | kintonePrettyType.PrettyMultiLineText
+              | kintonePrettyType.PrettyRichText
+              | kintonePrettyType.PrettyLink
+              | kintonePrettyType.PrettyCheckBox
+              | kintonePrettyType.PrettyRadioButton
+              | kintonePrettyType.PrettyDropdown
+              | kintonePrettyType.PrettyMultiSelect
+              | kintonePrettyType.PrettyDate
+              | kintonePrettyType.PrettyTime
+              | kintonePrettyType.PrettyDateTime
+              | kintonePrettyType.PrettyUserSelect
+              | kintonePrettyType.PrettyOrganizationSelect
+              | kintonePrettyType.PrettyGroupSelect =>
+              kintonePrettyFields.isSingleLineText(field) ||
+              kintonePrettyFields.isNumber(field) ||
+              kintonePrettyFields.isMultiLineText(field) ||
+              kintonePrettyFields.isRichText(field) ||
+              kintonePrettyFields.isLink(field) ||
+              kintonePrettyFields.isCheckBox(field) ||
+              kintonePrettyFields.isRadioButton(field) ||
+              kintonePrettyFields.isDropDown(field) ||
+              kintonePrettyFields.isMultiSelect(field) ||
+              kintonePrettyFields.isDate(field) ||
+              kintonePrettyFields.isTime(field) ||
+              kintonePrettyFields.isDatetime(field) ||
+              kintonePrettyFields.isUserSelect(field) ||
+              kintonePrettyFields.isOrganizationSelect(field) ||
+              kintonePrettyFields.isGroupSelect(field),
           )
           ?.find((field) => field.code === fieldMapping.field);
         if (lookupCopyField) lookupCopyField.isLookupCopy = true;
@@ -239,12 +219,12 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
 };
 
 const get = async ({ client, app, lang, preview }: { client: KintoneRestAPIClient; app: AppID; lang: Lang; preview: boolean }) => {
-  const [{ properties: formFields }, { layout: layouts }] = await Promise.all([
+  const [{ properties: formFields }, { layout: formLayouts }] = await Promise.all([
     client.app.getFormFields({ app, lang, preview }),
     client.app.getFormLayout({ app, preview }),
   ]);
 
-  return generateFields(formFields, layouts);
+  return generateFields(formFields, formLayouts);
 };
 
 export { get };

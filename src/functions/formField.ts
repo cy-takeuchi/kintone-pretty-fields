@@ -1,97 +1,48 @@
-import {
-  PrettyRecordNumber,
-  PrettyCreator,
-  PrettyCreatedTime,
-  PrettyModifier,
-  PrettyUpdatedTime,
-  PrettySingleLineText,
-  PrettyMultiLineText,
-  PrettyRichText,
-  PrettyNumber,
-  PrettyCalc,
-  PrettyCheckBox,
-  PrettyRadioButton,
-  PrettyMultiSelect,
-  PrettyDropdown,
-  PrettyUserSelect,
-  PrettyOrganizationSelect,
-  PrettyGroupSelect,
-  PrettyDate,
-  PrettyTime,
-  PrettyDateTime,
-  PrettyLink,
-  PrettyFile,
-  PrettyLookup,
-  PrettySubtable,
-  PrettyGroup,
-  PrettyReferenceTable,
-  PrettyCategory,
-  PrettyStatus,
-  PrettyStatusAssignee,
-  PrettyInSubtable,
-  PrettyInGroup,
-  PrettyOneOf,
-} from "../types/type";
+import type { kintonePrettyType } from "../index";
 
-const isRecordNumber = (field: PrettyOneOf): field is PrettyRecordNumber => field.type === "RECORD_NUMBER";
-const isCreator = (field: PrettyOneOf): field is PrettyCreator => field.type === "CREATOR";
-const isCreatedTime = (field: PrettyOneOf): field is PrettyCreatedTime => field.type === "CREATED_TIME";
-const isModifier = (field: PrettyOneOf): field is PrettyModifier => field.type === "MODIFIER";
-const isUpdatedTime = (field: PrettyOneOf): field is PrettyUpdatedTime => field.type === "UPDATED_TIME";
-const isSingleLineText = (field: PrettyOneOf): field is PrettySingleLineText => field.type === "SINGLE_LINE_TEXT";
-const isMultiLineText = (field: PrettyOneOf): field is PrettyMultiLineText => field.type === "MULTI_LINE_TEXT";
-const isRichText = (field: PrettyOneOf): field is PrettyRichText => field.type === "RICH_TEXT";
-const isNumber = (field: PrettyOneOf): field is PrettyNumber => field.type === "NUMBER";
-const isCalc = (field: PrettyOneOf): field is PrettyCalc => field.type === "CALC";
-const isCheckBox = (field: PrettyOneOf): field is PrettyCheckBox => field.type === "CHECK_BOX";
-const isRadioButton = (field: PrettyOneOf): field is PrettyRadioButton => field.type === "RADIO_BUTTON";
-const isMultiSelect = (field: PrettyOneOf): field is PrettyMultiSelect => field.type === "MULTI_SELECT";
-const isDropDown = (field: PrettyOneOf): field is PrettyDropdown => field.type === "DROP_DOWN";
-const isUserSelect = (field: PrettyOneOf): field is PrettyUserSelect => field.type === "USER_SELECT";
-const isOrganizationSelect = (field: PrettyOneOf): field is PrettyOrganizationSelect => field.type === "ORGANIZATION_SELECT";
-const isGroupSelect = (field: PrettyOneOf): field is PrettyGroupSelect => field.type === "GROUP_SELECT";
-const isDate = (field: PrettyOneOf): field is PrettyDate => field.type === "DATE";
-const isTime = (field: PrettyOneOf): field is PrettyTime => field.type === "TIME";
-const isDatetime = (field: PrettyOneOf): field is PrettyDateTime => field.type === "DATETIME";
-const isLink = (field: PrettyOneOf): field is PrettyLink => field.type === "LINK";
-const isFile = (field: PrettyOneOf): field is PrettyFile => field.type === "FILE";
-const isLookup = (field: PrettyOneOf): field is PrettyLookup =>
+export const isRecordNumber = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyRecordNumber =>
+  field.type === "RECORD_NUMBER";
+export const isCreator = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyCreator => field.type === "CREATOR";
+export const isCreatedTime = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyCreatedTime =>
+  field.type === "CREATED_TIME";
+export const isModifier = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyModifier => field.type === "MODIFIER";
+export const isUpdatedTime = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyUpdatedTime =>
+  field.type === "UPDATED_TIME";
+export const isSingleLineText = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettySingleLineText =>
+  field.type === "SINGLE_LINE_TEXT";
+export const isMultiLineText = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyMultiLineText =>
+  field.type === "MULTI_LINE_TEXT";
+export const isRichText = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyRichText => field.type === "RICH_TEXT";
+export const isNumber = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyNumber => field.type === "NUMBER";
+export const isCalc = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyCalc => field.type === "CALC";
+export const isCheckBox = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyCheckBox => field.type === "CHECK_BOX";
+export const isRadioButton = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyRadioButton =>
+  field.type === "RADIO_BUTTON";
+export const isMultiSelect = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyMultiSelect =>
+  field.type === "MULTI_SELECT";
+export const isDropDown = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyDropdown => field.type === "DROP_DOWN";
+export const isUserSelect = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyUserSelect =>
+  field.type === "USER_SELECT";
+export const isOrganizationSelect = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyOrganizationSelect =>
+  field.type === "ORGANIZATION_SELECT";
+export const isGroupSelect = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyGroupSelect =>
+  field.type === "GROUP_SELECT";
+export const isDate = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyDate => field.type === "DATE";
+export const isTime = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyTime => field.type === "TIME";
+export const isDatetime = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyDateTime => field.type === "DATETIME";
+export const isLink = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyLink => field.type === "LINK";
+export const isFile = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyFile => field.type === "FILE";
+export const isLookup = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyLookup =>
   (field.type === "SINGLE_LINE_TEXT" || field.type === "NUMBER") && "lookup" in field;
-const isSubtable = (field: PrettyOneOf): field is PrettySubtable<{ [fieldCode: string]: PrettyInSubtable }> => field.type === "SUBTABLE";
-const isGroup = (field: PrettyOneOf): field is PrettyGroup<{ [fieldCode: string]: PrettyInGroup }> => field.type === "GROUP";
-const isReferenceTable = (field: PrettyOneOf): field is PrettyReferenceTable => field.type === "REFERENCE_TABLE";
-const isCategory = (field: PrettyOneOf): field is PrettyCategory => field.type === "CATEGORY";
-const isStatus = (field: PrettyOneOf): field is PrettyStatus => field.type === "STATUS";
-const isStatusAssignee = (field: PrettyOneOf): field is PrettyStatusAssignee => field.type === "STATUS_ASSIGNEE";
-
-export {
-  isRecordNumber,
-  isCreator,
-  isCreatedTime,
-  isModifier,
-  isUpdatedTime,
-  isSingleLineText,
-  isMultiLineText,
-  isRichText,
-  isNumber,
-  isCalc,
-  isCheckBox,
-  isRadioButton,
-  isMultiSelect,
-  isDropDown,
-  isUserSelect,
-  isOrganizationSelect,
-  isGroupSelect,
-  isDate,
-  isTime,
-  isDatetime,
-  isLink,
-  isFile,
-  isLookup,
-  isSubtable,
-  isGroup,
-  isReferenceTable,
-  isCategory,
-  isStatus,
-  isStatusAssignee,
-};
+export const isSubtable = (
+  field: kintonePrettyType.PrettyOneOf,
+): field is kintonePrettyType.PrettySubtable<{ [fieldCode: string]: kintonePrettyType.PrettyInSubtable }> => field.type === "SUBTABLE";
+export const isGroup = (
+  field: kintonePrettyType.PrettyOneOf,
+): field is kintonePrettyType.PrettyGroup<{ [fieldCode: string]: kintonePrettyType.PrettyInGroup }> => field.type === "GROUP";
+export const isReferenceTable = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyReferenceTable =>
+  field.type === "REFERENCE_TABLE";
+export const isCategory = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyCategory => field.type === "CATEGORY";
+export const isStatus = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyStatus => field.type === "STATUS";
+export const isStatusAssignee = (field: kintonePrettyType.PrettyOneOf): field is kintonePrettyType.PrettyStatusAssignee =>
+  field.type === "STATUS_ASSIGNEE";

@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "strict": true,
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "declarationMap": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./dist",
     "esModuleInterop": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "package.json"]
 }

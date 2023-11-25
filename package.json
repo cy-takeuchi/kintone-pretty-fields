@@ -4,7 +4,7 @@
   "files": [
     "dist"
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Retrieve kintone form field(@kintone/rest-api-client) information in a pretty format.",
   "repository": {
     "type": "git",
@@ -21,10 +21,10 @@
   "homepage": "https://github.com/cy-takeuchi/kintone-pretty-fields",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "node": {
         "import": "./dist/index.js",
         "require": "./dist/index.umd.cjs",

@@ -1,174 +1,142 @@
-import {
-  RecordNumber,
-  Creator,
-  CreatedTime,
-  Modifier,
-  UpdatedTime,
-  SingleLineText,
-  MultiLineText,
-  RichText,
-  Number,
-  Calc,
-  CheckBox,
-  RadioButton,
-  MultiSelect,
-  Dropdown,
-  UserSelect,
-  OrganizationSelect,
-  GroupSelect,
-  // Group,
-  Date,
-  Time,
-  DateTime,
-  Link,
-  File,
-  Lookup,
-  // Subtable,
-  ReferenceTable,
-  Category,
-  Status,
-  StatusAssignee,
-  // InSubtable,
-  // OneOf,
-} from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/property";
+import * as property from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/property";
 
-export interface PrettyRecordNumber extends RecordNumber {
+export interface RecordNumber extends property.RecordNumber {
   // table?: string;
   group?: string;
 }
 
-export interface PrettyCreator extends Creator {
+export interface Creator extends property.Creator {
   // table?: string;
   group?: string;
 }
 
-export interface PrettyCreatedTime extends CreatedTime {
+export interface CreatedTime extends property.CreatedTime {
   // table?: string;
   group?: string;
 }
 
-export interface PrettyModifier extends Modifier {
+export interface Modifier extends property.Modifier {
   // table?: string;
   group?: string;
 }
 
-export interface PrettyUpdatedTime extends UpdatedTime {
+export interface UpdatedTime extends property.UpdatedTime {
   // table?: string;
   group?: string;
 }
 
-export interface PrettySingleLineText extends SingleLineText {
+export interface SingleLineText extends property.SingleLineText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyMultiLineText extends MultiLineText {
+export interface MultiLineText extends property.MultiLineText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyRichText extends RichText {
+export interface RichText extends property.RichText {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyNumber extends Number {
+export interface Number extends property.Number {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyCalc extends Calc {
+export interface Calc extends property.Calc {
   table?: string;
   group?: string;
 }
 
-export interface PrettyCheckBox extends CheckBox {
+export interface CheckBox extends property.CheckBox {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-export interface PrettyRadioButton extends RadioButton {
+export interface RadioButton extends property.RadioButton {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-export interface PrettyMultiSelect extends MultiSelect {
+export interface MultiSelect extends property.MultiSelect {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-export interface PrettyDropdown extends Dropdown {
+export interface Dropdown extends property.Dropdown {
   table?: string;
   group?: string;
   sortedOptions: string[];
   isLookupCopy?: true;
 }
 
-export interface PrettyUserSelect extends UserSelect {
+export interface UserSelect extends property.UserSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyOrganizationSelect extends OrganizationSelect {
+export interface OrganizationSelect extends property.OrganizationSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyGroupSelect extends GroupSelect {
+export interface GroupSelect extends property.GroupSelect {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyDate extends Date {
+export interface Date extends property.Date {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyTime extends Time {
+export interface Time extends property.Time {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyDateTime extends DateTime {
+export interface DateTime extends property.DateTime {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyLink extends Link {
+export interface Link extends property.Link {
   table?: string;
   group?: string;
   isLookupCopy?: true;
 }
 
-export interface PrettyFile extends File {
+export interface File extends property.File {
   table?: string;
   group?: string;
 }
 
-export interface PrettyLookup extends Lookup {
+export interface Lookup extends property.Lookup {
   table?: string;
   group?: string;
 }
 
-export type PrettySubtable<
+export type Subtable<
   T extends {
-    [fieldCode: string]: PrettyInSubtable;
+    [fieldCode: string]: InSubtable;
   },
 > = {
   type: "SUBTABLE";
@@ -178,9 +146,9 @@ export type PrettySubtable<
   fields: T;
 };
 
-export type PrettyGroup<
+export type Group<
   T extends {
-    [fieldCode: string]: PrettyInGroup;
+    [fieldCode: string]: InGroup;
   },
 > = {
   type: "GROUP";
@@ -191,103 +159,103 @@ export type PrettyGroup<
   fields: T;
 };
 
-export interface PrettyReferenceTable extends ReferenceTable {
+export interface ReferenceTable extends property.ReferenceTable {
   // table?: string;
   group?: string;
 }
 
-export interface PrettyCategory extends Category {
+export interface Category extends property.Category {
   // table?: string;
   // group?: string;
 }
 
-export interface PrettyStatus extends Status {
+export interface Status extends property.Status {
   // table?: string;
   // group?: string;
 }
 
-export interface PrettyStatusAssignee extends StatusAssignee {
+export interface StatusAssignee extends property.StatusAssignee {
   // table?: string;
   // group?: string;
 }
 
-export type PrettyInSubtable =
-  | PrettySingleLineText
-  | PrettyNumber
-  | PrettyCalc
-  | PrettyMultiLineText
-  | PrettyRichText
-  | PrettyLink
-  | PrettyCheckBox
-  | PrettyRadioButton
-  | PrettyDropdown
-  | PrettyMultiSelect
-  | PrettyFile
-  | PrettyDate
-  | PrettyTime
-  | PrettyDateTime
-  | PrettyUserSelect
-  | PrettyOrganizationSelect
-  | PrettyGroupSelect
-  | PrettyLookup;
+export type InSubtable =
+  | SingleLineText
+  | Number
+  | Calc
+  | MultiLineText
+  | RichText
+  | Link
+  | CheckBox
+  | RadioButton
+  | Dropdown
+  | MultiSelect
+  | File
+  | Date
+  | Time
+  | DateTime
+  | UserSelect
+  | OrganizationSelect
+  | GroupSelect
+  | Lookup;
 
-export type PrettyInGroup =
-  | PrettyRecordNumber
-  | PrettyCreator
-  | PrettyCreatedTime
-  | PrettyModifier
-  | PrettyUpdatedTime
-  | PrettySingleLineText
-  | PrettyNumber
-  | PrettyCalc
-  | PrettyMultiLineText
-  | PrettyRichText
-  | PrettyLink
-  | PrettyCheckBox
-  | PrettyRadioButton
-  | PrettyDropdown
-  | PrettyMultiSelect
-  | PrettyFile
-  | PrettyDate
-  | PrettyTime
-  | PrettyDateTime
-  | PrettyUserSelect
-  | PrettyOrganizationSelect
-  | PrettyGroupSelect
-  | PrettyReferenceTable
-  | PrettyLookup;
+export type InGroup =
+  | RecordNumber
+  | Creator
+  | CreatedTime
+  | Modifier
+  | UpdatedTime
+  | SingleLineText
+  | Number
+  | Calc
+  | MultiLineText
+  | RichText
+  | Link
+  | CheckBox
+  | RadioButton
+  | Dropdown
+  | MultiSelect
+  | File
+  | Date
+  | Time
+  | DateTime
+  | UserSelect
+  | OrganizationSelect
+  | GroupSelect
+  | ReferenceTable
+  | Lookup;
 
-export type PrettyOneOf =
-  | PrettyRecordNumber
-  | PrettyCreator
-  | PrettyCreatedTime
-  | PrettyModifier
-  | PrettyUpdatedTime
-  | PrettyCategory
-  | PrettyStatus
-  | PrettyStatusAssignee
-  | PrettySingleLineText
-  | PrettyNumber
-  | PrettyCalc
-  | PrettyMultiLineText
-  | PrettyRichText
-  | PrettyLink
-  | PrettyCheckBox
-  | PrettyRadioButton
-  | PrettyDropdown
-  | PrettyMultiSelect
-  | PrettyFile
-  | PrettyDate
-  | PrettyTime
-  | PrettyDateTime
-  | PrettyUserSelect
-  | PrettyOrganizationSelect
-  | PrettyGroupSelect
-  | PrettyReferenceTable
-  | PrettyGroup<{
-      [fieldCode: string]: PrettyInGroup;
+export type OneOf =
+  | RecordNumber
+  | Creator
+  | CreatedTime
+  | Modifier
+  | UpdatedTime
+  | Category
+  | Status
+  | StatusAssignee
+  | SingleLineText
+  | Number
+  | Calc
+  | MultiLineText
+  | RichText
+  | Link
+  | CheckBox
+  | RadioButton
+  | Dropdown
+  | MultiSelect
+  | File
+  | Date
+  | Time
+  | DateTime
+  | UserSelect
+  | OrganizationSelect
+  | GroupSelect
+  | ReferenceTable
+  | Group<{
+      [fieldCode: string]: InGroup;
     }>
-  | PrettyLookup
-  | PrettySubtable<{
-      [fieldCode: string]: PrettyInSubtable;
+  | Lookup
+  | Subtable<{
+      [fieldCode: string]: InSubtable;
     }>;

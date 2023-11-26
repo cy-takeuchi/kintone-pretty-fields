@@ -17,7 +17,7 @@ const sortOptions = (options: {
     .map(({ label }) => label);
 
 const generateFields = (formFields: Properties, formLayouts: Layout) => {
-  const fields: kintonePrettyType.PrettyOneOf[] = [];
+  const fields: kintonePrettyType.OneOf[] = [];
   const spacers: Spacer[] = [];
 
   const statusFormField = Object.values(formFields).find(guardFormField.isStatus);
@@ -67,7 +67,7 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
       // Subtableではない可能性はゼロだが、type error回避のため
       if (!guardFormField.isSubtable(formField)) continue;
 
-      const subField: { [fieldCode: string]: kintonePrettyType.PrettyInSubtable } = {};
+      const subField: { [fieldCode: string]: kintonePrettyType.InSubtable } = {};
       for (const { code: subFieldCode } of formLayout.fields) {
         const subFormField = formField.fields[subFieldCode];
         if (
@@ -95,7 +95,7 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
       // Groupではない可能性はゼロだが、type error回避のため
       if (!guardFormField.isGroup(formField)) continue;
 
-      const subField: { [fieldCode: string]: kintonePrettyType.PrettyInGroup } = {};
+      const subField: { [fieldCode: string]: kintonePrettyType.InGroup } = {};
       for (const formRow of formLayout.layout) {
         for (const field of formRow.fields) {
           if (guardFormLayout.isLabel(field) || guardFormLayout.isHr(field)) {
@@ -148,21 +148,21 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
             (
               field,
             ): field is
-              | kintonePrettyType.PrettySingleLineText
-              | kintonePrettyType.PrettyNumber
-              | kintonePrettyType.PrettyMultiLineText
-              | kintonePrettyType.PrettyRichText
-              | kintonePrettyType.PrettyLink
-              | kintonePrettyType.PrettyCheckBox
-              | kintonePrettyType.PrettyRadioButton
-              | kintonePrettyType.PrettyDropdown
-              | kintonePrettyType.PrettyMultiSelect
-              | kintonePrettyType.PrettyDate
-              | kintonePrettyType.PrettyTime
-              | kintonePrettyType.PrettyDateTime
-              | kintonePrettyType.PrettyUserSelect
-              | kintonePrettyType.PrettyOrganizationSelect
-              | kintonePrettyType.PrettyGroupSelect =>
+              | kintonePrettyType.SingleLineText
+              | kintonePrettyType.Number
+              | kintonePrettyType.MultiLineText
+              | kintonePrettyType.RichText
+              | kintonePrettyType.Link
+              | kintonePrettyType.CheckBox
+              | kintonePrettyType.RadioButton
+              | kintonePrettyType.Dropdown
+              | kintonePrettyType.MultiSelect
+              | kintonePrettyType.Date
+              | kintonePrettyType.Time
+              | kintonePrettyType.DateTime
+              | kintonePrettyType.UserSelect
+              | kintonePrettyType.OrganizationSelect
+              | kintonePrettyType.GroupSelect =>
               kintonePrettyFields.isSingleLineText(field) ||
               kintonePrettyFields.isNumber(field) ||
               kintonePrettyFields.isMultiLineText(field) ||

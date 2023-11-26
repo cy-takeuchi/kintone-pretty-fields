@@ -117,20 +117,22 @@ Here is a sample code that retrieves form fields of an app.
 
 ```ts
 import { KintoneRestAPIClient } from "@kintone/rest-api-client";
-import { kintonePrettyFields } from "kintone-pretty-fields";
+import { kintonePrettyFields, kintonePrettyType } from "kintone-pretty-fields";
 
 const client = new KintoneRestAPIClient();
 const { fields, spacers } = await kintonePrettyFields.get({ client, app: 1, lang: "en", preview: false });
 console.log({ fields, spacers });
 
-for (const field of fields) {
-  if (kintonePrettyFields.isSingleLineText(field)) {
-    // do something
-  }
-  if (kintonePrettyFields.isDate(field)) {
-    // do something
-  }
-}
+const checkBoxFields = fields.filter(kintonePrettyFields.isCheckBox);
+console.log(checkBoxFields);
+
+const myFunction1 = (fields: kintonePrettyType.OneOf[]) => {
+  // do something
+};
+
+const myFunction2 = (field: kintonePrettyType.CheckBox) => {
+  // do something
+};
 ```
 
 ## License

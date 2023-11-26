@@ -135,4 +135,4 @@ for (const field of fields) {
 
 ## License
 
-- [MIT](https://github.com/kintone/js-sdk/tree/master/LICENSE)
+- [MIT](https://github.com/cy-takeuchi/kintone-pretty-fields/blob/main/LICENSE)

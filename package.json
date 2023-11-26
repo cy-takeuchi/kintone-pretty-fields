@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@kintone/rest-api-client": "^5.0.3",
-    "kintone-typeguard": "^0.6.0"
+    "kintone-typeguard": "^0.7.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

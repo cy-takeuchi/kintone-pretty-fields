@@ -4,7 +4,7 @@
   "files": [
     "dist"
   ],
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Retrieve kintone form field(@kintone/rest-api-client) information in a pretty format.",
   "repository": {
     "type": "git",

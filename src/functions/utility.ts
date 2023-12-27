@@ -4,7 +4,8 @@ import { Spacer } from "@kintone/rest-api-client/lib/src/KintoneFields/types/fie
 
 import { guardFormField, guardFormLayout } from "kintone-typeguard";
 
-import { kintonePrettyFields, kintonePrettyType } from "../index";
+import type * as kintonePrettyType from "../exportTypes/formField";
+import * as kintonePrettyTypeGuard from "../functions/formField";
 
 const sortOptions = (options: {
   [optionName: string]: {
@@ -163,21 +164,21 @@ const generateFields = (formFields: Properties, formLayouts: Layout) => {
               | kintonePrettyType.UserSelect
               | kintonePrettyType.OrganizationSelect
               | kintonePrettyType.GroupSelect =>
-              kintonePrettyFields.isSingleLineText(field) ||
-              kintonePrettyFields.isNumber(field) ||
-              kintonePrettyFields.isMultiLineText(field) ||
-              kintonePrettyFields.isRichText(field) ||
-              kintonePrettyFields.isLink(field) ||
-              kintonePrettyFields.isCheckBox(field) ||
-              kintonePrettyFields.isRadioButton(field) ||
-              kintonePrettyFields.isDropDown(field) ||
-              kintonePrettyFields.isMultiSelect(field) ||
-              kintonePrettyFields.isDate(field) ||
-              kintonePrettyFields.isTime(field) ||
-              kintonePrettyFields.isDatetime(field) ||
-              kintonePrettyFields.isUserSelect(field) ||
-              kintonePrettyFields.isOrganizationSelect(field) ||
-              kintonePrettyFields.isGroupSelect(field),
+              kintonePrettyTypeGuard.isSingleLineText(field) ||
+              kintonePrettyTypeGuard.isNumber(field) ||
+              kintonePrettyTypeGuard.isMultiLineText(field) ||
+              kintonePrettyTypeGuard.isRichText(field) ||
+              kintonePrettyTypeGuard.isLink(field) ||
+              kintonePrettyTypeGuard.isCheckBox(field) ||
+              kintonePrettyTypeGuard.isRadioButton(field) ||
+              kintonePrettyTypeGuard.isDropDown(field) ||
+              kintonePrettyTypeGuard.isMultiSelect(field) ||
+              kintonePrettyTypeGuard.isDate(field) ||
+              kintonePrettyTypeGuard.isTime(field) ||
+              kintonePrettyTypeGuard.isDatetime(field) ||
+              kintonePrettyTypeGuard.isUserSelect(field) ||
+              kintonePrettyTypeGuard.isOrganizationSelect(field) ||
+              kintonePrettyTypeGuard.isGroupSelect(field),
           )
           ?.find((field) => field.code === fieldMapping.field);
         if (lookupCopyField) lookupCopyField.isLookupCopy = true;

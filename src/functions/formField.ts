@@ -1,4 +1,4 @@
-import type { kintonePrettyType } from "../index";
+import type * as kintonePrettyType from "../exportTypes/formField";
 
 export const isRecordNumber = (field: kintonePrettyType.OneOf): field is kintonePrettyType.RecordNumber => field.type === "RECORD_NUMBER";
 export const isCreator = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Creator => field.type === "CREATOR";
@@ -39,3 +39,27 @@ export const isCategory = (field: kintonePrettyType.OneOf): field is kintonePret
 export const isStatus = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Status => field.type === "STATUS";
 export const isStatusAssignee = (field: kintonePrettyType.OneOf): field is kintonePrettyType.StatusAssignee =>
   field.type === "STATUS_ASSIGNEE";
+export const enableInSubtable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.InSubtable => {
+  return (
+    isSingleLineText(field) ||
+    isNumber(field) ||
+    isCalc(field) ||
+    isMultiLineText(field) ||
+    isRichText(field) ||
+    isLink(field) ||
+    isCheckBox(field) ||
+    isRadioButton(field) ||
+    isDropDown(field) ||
+    isMultiSelect(field) ||
+    isFile(field) ||
+    isDate(field) ||
+    isTime(field) ||
+    isDatetime(field) ||
+    isUserSelect(field) ||
+    isOrganizationSelect(field) ||
+    isGroupSelect(field) ||
+    isReferenceTable(field) ||
+    isLookup(field)
+  );
+};
+export const isInSubtable = <T extends kintonePrettyType.InSubtable>(field: T): field is T & { table: string } => field.table !== undefined;

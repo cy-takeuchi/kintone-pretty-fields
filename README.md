@@ -126,6 +126,9 @@ console.log({ fields, spacers });
 const checkBoxFields = fields.filter(kintonePrettyFields.isCheckBox);
 console.log(checkBoxFields);
 
+const inSubtableFields = fields.filter(kintonePrettyFields.enableInSubtable).filter(kintonePrettyFields.isInSubtable);
+console.log(inSubtableFields);
+
 const myFunction1 = (fields: kintonePrettyType.OneOf[]) => {
   // do something
 };

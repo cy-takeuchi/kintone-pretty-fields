@@ -1,24 +1,26 @@
 version: 2
 
 updates:
-  - package-ecosystem: github-actions
-    directory: /
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
     assignees:
-      - cy-takeuchi
+      - "cy-takeuchi"
 
-  - package-ecosystem: npm
-    directory: /
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
     assignees:
-      - cy-takeuchi
+      - "cy-takeuchi"
     groups:
       safe-dependencies:
         update-types: ["minor", "patch"]
-      major-dependencies:
-        update-types: ["major"]
     commit-message:
-      prefix: chore
-      prefix-development: chore(dev)
+      prefix: "fix"
+      prefix-development: "fix(dev)"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"

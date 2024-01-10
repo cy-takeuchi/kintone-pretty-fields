@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "cy-takeuchi"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    commit-message:
+      prefix: "fix"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "cy-takeuchi"

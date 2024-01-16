@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.1...v0.5.2) (2024-01-16)
+
+
+### Bug Fixes
+
+* **dev:** bump the safe-dependencies group with 2 updates ([9e9a894](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/9e9a894f621950a002a62a2434013a28efc2dc51))
+
 ## [0.5.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.0...v0.5.1) (2024-01-10)
 
 

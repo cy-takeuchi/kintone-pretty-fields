@@ -1,5 +1,7 @@
 # kintone-pretty-fields
 
+[![npm version](https://badge.fury.io/js/kintone-pretty-fields.svg)](https://badge.fury.io/js/kintone-pretty-fields)
+
 Retrieve kintone form field([@kintone/rest-api-client](https://www.npmjs.com/package/@kintone/rest-api-client)) information in a pretty format.
 
 - [Description](#description)

@@ -5,6 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
     assignees:
       - "cy-takeuchi"
 
@@ -12,15 +13,13 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
     assignees:
       - "cy-takeuchi"
-    groups:
-      safe-dependencies:
-        update-types: ["minor", "patch"]
     commit-message:
       prefix: "fix"
       prefix-development: "fix(dev)"
     ignore:
       - dependency-name: "*"
         update-types:
-          - "version-update:semver-major"
+          - "major"

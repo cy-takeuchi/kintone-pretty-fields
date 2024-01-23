@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "sunday"
+      day: "saturday"
     assignees:
       - "cy-takeuchi"
 
@@ -19,6 +19,13 @@ updates:
     commit-message:
       prefix: "fix"
       prefix-development: "fix(dev)"
+    groups:
+      group-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
     ignore:
       - dependency-name: "*"
         update-types:

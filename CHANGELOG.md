@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.5](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.4...v0.5.5) (2024-02-04)
+
+
+### Bug Fixes
+
+* ビルドに失敗する ([37d6819](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/37d68192999d6b4a2e1d0c320543153c37624fe6))
+
 ## [0.5.4](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.3...v0.5.4) (2024-02-04)
 
 

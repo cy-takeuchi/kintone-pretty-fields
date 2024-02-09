@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.6](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.5...v0.5.6) (2024-02-09)
+
+
+### Bug Fixes
+
+* update node version on workflow ([c33d9d1](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/c33d9d1f498d0cd770ebe4dba142a1fbd4553285))
+* update package ([bec7e59](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/bec7e59efa2a4620c12bdaea5a3237fe42574937))
+
 ## [0.5.5](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.4...v0.5.5) (2024-02-04)
 
 

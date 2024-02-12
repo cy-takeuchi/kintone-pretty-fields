@@ -5,7 +5,7 @@
     "dist"
   ],
   "version": "0.5.7",
-  "description": "Retrieve kintone form field(@kintone/rest-api-client) information in a pretty format.",
+  "description": "Get kintone form fields in a pretty format.",
   "repository": {
     "type": "git",
     "url": "https://github.com/cy-takeuchi/kintone-pretty-fields.git"

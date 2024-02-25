@@ -1,0 +1,119 @@
+[
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "LABEL",
+        "label": "<div><font size=\"4\" style=\"\"><b>顧客リスト</b></font></div>",
+        "size": {
+          "width": "122"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "会社名",
+        "size": {
+          "width": "381"
+        }
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "部署名",
+        "size": {
+          "width": "190"
+        }
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "担当者名",
+        "size": {
+          "width": "190"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "DROP_DOWN",
+        "code": "顧客ランク",
+        "size": {
+          "width": "196"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "郵便番号",
+        "size": {
+          "width": "193"
+        }
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "住所",
+        "size": {
+          "width": "571"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "LINK",
+        "code": "電話番号",
+        "size": {
+          "width": "193"
+        }
+      },
+      {
+        "type": "LINK",
+        "code": "FAX",
+        "size": {
+          "width": "193"
+        }
+      },
+      {
+        "type": "LINK",
+        "code": "メールアドレス",
+        "size": {
+          "width": "193"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "MULTI_LINE_TEXT",
+        "code": "備考",
+        "size": {
+          "width": "764",
+          "innerHeight": "150"
+        }
+      }
+    ]
+  },
+  {
+    "type": "ROW",
+    "fields": [
+      {
+        "type": "REFERENCE_TABLE",
+        "code": "対応一覧"
+      }
+    ]
+  }
+]

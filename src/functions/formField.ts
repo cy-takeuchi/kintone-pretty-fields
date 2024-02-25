@@ -25,8 +25,14 @@ export const isTime = (field: kintonePrettyType.OneOf): field is kintonePrettyTy
 export const isDatetime = (field: kintonePrettyType.OneOf): field is kintonePrettyType.DateTime => field.type === "DATETIME";
 export const isLink = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Link => field.type === "LINK";
 export const isFile = (field: kintonePrettyType.OneOf): field is kintonePrettyType.File => field.type === "FILE";
-export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup =>
-  (field.type === "SINGLE_LINE_TEXT" || field.type === "NUMBER") && "lookup" in field;
+export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup => {
+  if (field.type === "SINGLE_LINE_TEXT" && "lookup" in field) return true;
+  if (field.type === "NUMBER" && "lookup" in field) return true;
+  if (field.type === "CALC" && "lookup" in field) return true;
+  if (field.type === "LINK" && "lookup" in field) return true;
+  if (field.type === "RECORD_NUMBER" && "lookup" in field) return true;
+  return false;
+};
 export const isSubtable = (
   field: kintonePrettyType.OneOf,
 ): field is kintonePrettyType.Subtable<{ [fieldCode: string]: kintonePrettyType.InSubtable }> => field.type === "SUBTABLE";

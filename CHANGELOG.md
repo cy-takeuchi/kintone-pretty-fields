@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.9](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.8...v0.5.9) (2024-02-25)
+
+
+### Bug Fixes
+
+* ルックアップフィールドとする対象フィールドが少ない ([a508db0](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/a508db03c7a99e68f12d5c6e50c7a86a07273e64))
+
 ## [0.5.8](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.7...v0.5.8) (2024-02-19)
 
 

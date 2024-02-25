@@ -1,0 +1,201 @@
+{
+  "備考": {
+    "type": "MULTI_LINE_TEXT",
+    "code": "備考",
+    "label": "備考",
+    "noLabel": false,
+    "required": false,
+    "defaultValue": ""
+  },
+  "作業者": {
+    "type": "STATUS_ASSIGNEE",
+    "code": "作業者",
+    "label": "作業者",
+    "enabled": false
+  },
+  "更新者": {
+    "type": "MODIFIER",
+    "code": "更新者",
+    "label": "更新者",
+    "noLabel": false
+  },
+  "対応一覧": {
+    "type": "REFERENCE_TABLE",
+    "code": "対応一覧",
+    "label": "対応一覧",
+    "noLabel": false,
+    "referenceTable": {
+      "relatedApp": {
+        "app": "2290",
+        "code": ""
+      },
+      "condition": {
+        "field": "会社名",
+        "relatedField": "ルックアップ"
+      },
+      "filterCond": "",
+      "displayFields": ["ご担当者名", "受付日時", "対応状況", "問い合わせ種別", "詳細", "期限"],
+      "sort": "レコード番号 desc",
+      "size": "5"
+    }
+  },
+  "作成者": {
+    "type": "CREATOR",
+    "code": "作成者",
+    "label": "作成者",
+    "noLabel": false
+  },
+  "ステータス": {
+    "type": "STATUS",
+    "code": "ステータス",
+    "label": "ステータス",
+    "enabled": false
+  },
+  "郵便番号": {
+    "type": "SINGLE_LINE_TEXT",
+    "code": "郵便番号",
+    "label": "郵便番号",
+    "noLabel": false,
+    "required": false,
+    "minLength": "",
+    "maxLength": "7",
+    "expression": "",
+    "hideExpression": false,
+    "unique": false,
+    "defaultValue": ""
+  },
+  "部署名": {
+    "type": "SINGLE_LINE_TEXT",
+    "code": "部署名",
+    "label": "部署名",
+    "noLabel": false,
+    "required": false,
+    "minLength": "",
+    "maxLength": "",
+    "expression": "",
+    "hideExpression": false,
+    "unique": false,
+    "defaultValue": ""
+  },
+  "担当者名": {
+    "type": "SINGLE_LINE_TEXT",
+    "code": "担当者名",
+    "label": "担当者名",
+    "noLabel": false,
+    "required": false,
+    "minLength": "",
+    "maxLength": "",
+    "expression": "",
+    "hideExpression": false,
+    "unique": false,
+    "defaultValue": ""
+  },
+  "メールアドレス": {
+    "type": "LINK",
+    "code": "メールアドレス",
+    "label": "メールアドレス",
+    "noLabel": false,
+    "required": false,
+    "protocol": "MAIL",
+    "minLength": "",
+    "maxLength": "",
+    "unique": false,
+    "defaultValue": ""
+  },
+  "更新日時": {
+    "type": "UPDATED_TIME",
+    "code": "更新日時",
+    "label": "更新日時",
+    "noLabel": false
+  },
+  "顧客ランク": {
+    "type": "DROP_DOWN",
+    "code": "顧客ランク",
+    "label": "顧客ランク",
+    "noLabel": false,
+    "required": false,
+    "options": {
+      "A": {
+        "label": "A",
+        "index": "0"
+      },
+      "B": {
+        "label": "B",
+        "index": "1"
+      },
+      "C": {
+        "label": "C",
+        "index": "2"
+      }
+    },
+    "defaultValue": ""
+  },
+  "カテゴリー": {
+    "type": "CATEGORY",
+    "code": "カテゴリー",
+    "label": "カテゴリー",
+    "enabled": false
+  },
+  "record_no": {
+    "type": "RECORD_NUMBER",
+    "code": "record_no",
+    "label": "レコード番号",
+    "noLabel": false
+  },
+  "住所": {
+    "type": "SINGLE_LINE_TEXT",
+    "code": "住所",
+    "label": "住所",
+    "noLabel": false,
+    "required": false,
+    "minLength": "",
+    "maxLength": "",
+    "expression": "",
+    "hideExpression": false,
+    "unique": false,
+    "defaultValue": ""
+  },
+  "電話番号": {
+    "type": "LINK",
+    "code": "電話番号",
+    "label": "電話番号",
+    "noLabel": false,
+    "required": false,
+    "protocol": "CALL",
+    "minLength": "",
+    "maxLength": "",
+    "unique": false,
+    "defaultValue": ""
+  },
+  "FAX": {
+    "type": "LINK",
+    "code": "FAX",
+    "label": "FAX",
+    "noLabel": false,
+    "required": false,
+    "protocol": "CALL",
+    "minLength": "",
+    "maxLength": "",
+    "unique": false,
+    "defaultValue": ""
+  },
+  "作成日時": {
+    "type": "CREATED_TIME",
+    "code": "作成日時",
+    "label": "作成日時",
+    "noLabel": false
+  },
+  "会社名": {
+    "type": "SINGLE_LINE_TEXT",
+    "code": "会社名",
+    "label": "会社名",
+    "noLabel": false,
+    "required": false,
+    "minLength": "",
+    "maxLength": "64",
+    "expression": "",
+    "hideExpression": false,
+    "unique": true,
+    "defaultValue": ""
+  }
+}

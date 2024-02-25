@@ -62,6 +62,42 @@ describe("ルックアップ", () => {
   });
 });
 
+describe("ルックアップコピー", () => {
+  const fields = allFields.filter(kintonePrettyFields.isLookupCopy);
+  console.log({ fields });
+
+  test("フィールド数", () => {
+    expect(fields.length).toBe(2);
+  });
+
+  test("フィールドコード", () => {
+    expect(fields[0].code).toBe("ご担当者名");
+    expect(fields[1].code).toBe("電話番号");
+  });
+
+  describe("文字列1行", () => {
+    const singleLineTextFields = fields.filter(kintonePrettyFields.isSingleLineText);
+    test("フィールド数", () => {
+      expect(singleLineTextFields.length).toBe(1);
+    });
+
+    test("フィールドコード", () => {
+      expect(singleLineTextFields[0].code).toBe("ご担当者名");
+    });
+  });
+
+  describe("リンク", () => {
+    const linkFields = fields.filter(kintonePrettyFields.isLink);
+    test("フィールド数", () => {
+      expect(linkFields.length).toBe(1);
+    });
+
+    test("フィールドコード", () => {
+      expect(linkFields[0].code).toBe("電話番号");
+    });
+  });
+});
+
 describe("日付", () => {
   const fields = allFields.filter(kintonePrettyFields.isDate);
 

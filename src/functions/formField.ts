@@ -25,14 +25,6 @@ export const isTime = (field: kintonePrettyType.OneOf): field is kintonePrettyTy
 export const isDatetime = (field: kintonePrettyType.OneOf): field is kintonePrettyType.DateTime => field.type === "DATETIME";
 export const isLink = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Link => field.type === "LINK";
 export const isFile = (field: kintonePrettyType.OneOf): field is kintonePrettyType.File => field.type === "FILE";
-export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup => {
-  if (field.type === "SINGLE_LINE_TEXT" && "lookup" in field) return true;
-  if (field.type === "NUMBER" && "lookup" in field) return true;
-  if (field.type === "CALC" && "lookup" in field) return true;
-  if (field.type === "LINK" && "lookup" in field) return true;
-  if (field.type === "RECORD_NUMBER" && "lookup" in field) return true;
-  return false;
-};
 export const isSubtable = (
   field: kintonePrettyType.OneOf,
 ): field is kintonePrettyType.Subtable<{ [fieldCode: string]: kintonePrettyType.InSubtable }> => field.type === "SUBTABLE";
@@ -45,6 +37,52 @@ export const isCategory = (field: kintonePrettyType.OneOf): field is kintonePret
 export const isStatus = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Status => field.type === "STATUS";
 export const isStatusAssignee = (field: kintonePrettyType.OneOf): field is kintonePrettyType.StatusAssignee =>
   field.type === "STATUS_ASSIGNEE";
+
+export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup => {
+  if (isSingleLineText(field) && "lookup" in field) return true;
+  if (isNumber(field) && "lookup" in field) return true;
+  if (isCalc(field) && "lookup" in field) return true;
+  if (isLink(field) && "lookup" in field) return true;
+  if (isRecordNumber(field) && "lookup" in field) return true;
+  return false;
+};
+export const isLookupCopy = (
+  field: kintonePrettyType.OneOf,
+): field is
+  | kintonePrettyType.SingleLineText
+  | kintonePrettyType.MultiLineText
+  | kintonePrettyType.RichText
+  | kintonePrettyType.Number
+  | kintonePrettyType.Calc
+  | kintonePrettyType.CheckBox
+  | kintonePrettyType.RadioButton
+  | kintonePrettyType.MultiSelect
+  | kintonePrettyType.Dropdown
+  | kintonePrettyType.UserSelect
+  | kintonePrettyType.OrganizationSelect
+  | kintonePrettyType.GroupSelect
+  | kintonePrettyType.Date
+  | kintonePrettyType.Time
+  | kintonePrettyType.DateTime
+  | kintonePrettyType.Link => {
+  if (isSingleLineText(field) && "isLookupCopy" in field) return true;
+  if (isMultiLineText(field) && "isLookupCopy" in field) return true;
+  if (isRichText(field) && "isLookupCopy" in field) return true;
+  if (isNumber(field) && "isLookupCopy" in field) return true;
+  if (isCalc(field) && "isLookupCopy" in field) return true;
+  if (isCheckBox(field) && "isLookupCopy" in field) return true;
+  if (isRadioButton(field) && "isLookupCopy" in field) return true;
+  if (isMultiSelect(field) && "isLookupCopy" in field) return true;
+  if (isDropDown(field) && "isLookupCopy" in field) return true;
+  if (isUserSelect(field) && "isLookupCopy" in field) return true;
+  if (isOrganizationSelect(field) && "isLookupCopy" in field) return true;
+  if (isGroupSelect(field) && "isLookupCopy" in field) return true;
+  if (isDate(field) && "isLookupCopy" in field) return true;
+  if (isTime(field) && "isLookupCopy" in field) return true;
+  if (isDatetime(field) && "isLookupCopy" in field) return true;
+  if (isLink(field) && "isLookupCopy" in field) return true;
+  return false;
+};
 export const enableInSubtable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.InSubtable => {
   return (
     isSingleLineText(field) ||

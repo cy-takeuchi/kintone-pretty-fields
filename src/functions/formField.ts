@@ -26,11 +26,11 @@ export const isDatetime = (field: kintonePrettyType.OneOf): field is kintonePret
 export const isLink = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Link => field.type === "LINK";
 export const isFile = (field: kintonePrettyType.OneOf): field is kintonePrettyType.File => field.type === "FILE";
 export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup => {
-  if (field.type === "SINGLE_LINE_TEXT" && "lookup" in field) return true;
-  if (field.type === "NUMBER" && "lookup" in field) return true;
-  if (field.type === "CALC" && "lookup" in field) return true;
-  if (field.type === "LINK" && "lookup" in field) return true;
-  if (field.type === "RECORD_NUMBER" && "lookup" in field) return true;
+  if (isSingleLineText(field) && "lookup" in field) return true;
+  if (isNumber(field) && "lookup" in field) return true;
+  if (isCalc(field) && "lookup" in field) return true;
+  if (isLink(field) && "lookup" in field) return true;
+  if (isRecordNumber(field) && "lookup" in field) return true;
   return false;
 };
 export const isLookupCopy = (

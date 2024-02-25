@@ -25,6 +25,19 @@ export const isTime = (field: kintonePrettyType.OneOf): field is kintonePrettyTy
 export const isDatetime = (field: kintonePrettyType.OneOf): field is kintonePrettyType.DateTime => field.type === "DATETIME";
 export const isLink = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Link => field.type === "LINK";
 export const isFile = (field: kintonePrettyType.OneOf): field is kintonePrettyType.File => field.type === "FILE";
+export const isSubtable = (
+  field: kintonePrettyType.OneOf,
+): field is kintonePrettyType.Subtable<{ [fieldCode: string]: kintonePrettyType.InSubtable }> => field.type === "SUBTABLE";
+export const isGroup = (
+  field: kintonePrettyType.OneOf,
+): field is kintonePrettyType.Group<{ [fieldCode: string]: kintonePrettyType.InGroup }> => field.type === "GROUP";
+export const isReferenceTable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.ReferenceTable =>
+  field.type === "REFERENCE_TABLE";
+export const isCategory = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Category => field.type === "CATEGORY";
+export const isStatus = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Status => field.type === "STATUS";
+export const isStatusAssignee = (field: kintonePrettyType.OneOf): field is kintonePrettyType.StatusAssignee =>
+  field.type === "STATUS_ASSIGNEE";
+
 export const isLookup = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Lookup => {
   if (isSingleLineText(field) && "lookup" in field) return true;
   if (isNumber(field) && "lookup" in field) return true;
@@ -70,18 +83,6 @@ export const isLookupCopy = (
   if (isLink(field) && "isLookupCopy" in field) return true;
   return false;
 };
-export const isSubtable = (
-  field: kintonePrettyType.OneOf,
-): field is kintonePrettyType.Subtable<{ [fieldCode: string]: kintonePrettyType.InSubtable }> => field.type === "SUBTABLE";
-export const isGroup = (
-  field: kintonePrettyType.OneOf,
-): field is kintonePrettyType.Group<{ [fieldCode: string]: kintonePrettyType.InGroup }> => field.type === "GROUP";
-export const isReferenceTable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.ReferenceTable =>
-  field.type === "REFERENCE_TABLE";
-export const isCategory = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Category => field.type === "CATEGORY";
-export const isStatus = (field: kintonePrettyType.OneOf): field is kintonePrettyType.Status => field.type === "STATUS";
-export const isStatusAssignee = (field: kintonePrettyType.OneOf): field is kintonePrettyType.StatusAssignee =>
-  field.type === "STATUS_ASSIGNEE";
 export const enableInSubtable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.InSubtable => {
   return (
     isSingleLineText(field) ||

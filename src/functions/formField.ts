@@ -83,28 +83,5 @@ export const isLookupCopy = (
   if (isLink(field) && "isLookupCopy" in field) return true;
   return false;
 };
-export const enableInSubtable = (field: kintonePrettyType.OneOf): field is kintonePrettyType.InSubtable => {
-  return (
-    isSingleLineText(field) ||
-    isNumber(field) ||
-    isCalc(field) ||
-    isMultiLineText(field) ||
-    isRichText(field) ||
-    isLink(field) ||
-    isCheckBox(field) ||
-    isRadioButton(field) ||
-    isDropDown(field) ||
-    isMultiSelect(field) ||
-    isFile(field) ||
-    isDate(field) ||
-    isTime(field) ||
-    isDatetime(field) ||
-    isUserSelect(field) ||
-    isOrganizationSelect(field) ||
-    isGroupSelect(field) ||
-    isReferenceTable(field) ||
-    isLookup(field)
-  );
-};
 export const isInGroup = <T extends kintonePrettyType.OneOf>(field: T): field is T & { group: string } => "group" in field;
 export const isInSubtable = <T extends kintonePrettyType.OneOf>(field: T): field is T & { table: string } => "table" in field;

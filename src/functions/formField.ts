@@ -106,4 +106,5 @@ export const enableInSubtable = (field: kintonePrettyType.OneOf): field is kinto
     isLookup(field)
   );
 };
-export const isInSubtable = <T extends kintonePrettyType.InSubtable>(field: T): field is T & { table: string } => field.table !== undefined;
+export const isInGroup = <T extends kintonePrettyType.OneOf>(field: T): field is T & { group: string } => "group" in field;
+export const isInSubtable = <T extends kintonePrettyType.OneOf>(field: T): field is T & { table: string } => "table" in field;

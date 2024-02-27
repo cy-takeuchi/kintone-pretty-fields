@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.6.0...v0.7.0) (2024-02-27)
+
+
+### Features
+
+* delete enableInSubtable ([6b16463](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/6b1646325e1eec3f3563f8fd0ad93cd9d5b52911))
+* テーブル内フィールド、グループ内フィールドの絞り込み変更 ([667a751](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/667a75192a9e3c70fc6d630c02a872db2ecb55d6))
+
 ## [0.6.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.5.9...v0.6.0) (2024-02-25)
 
 

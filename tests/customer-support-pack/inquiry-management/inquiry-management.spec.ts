@@ -109,3 +109,17 @@ describe("日付", () => {
     expect(fields[0].code).toBe("期限");
   });
 });
+
+describe("テーブル", () => {
+  const fields = allFields.filter(kintonePrettyFields.isInSubtable);
+
+  test("フィールド数", () => {
+    expect(fields.length).toBe(3);
+  });
+
+  test("フィールドコード", () => {
+    expect(fields[0].code).toBe("対応日時");
+    expect(fields[1].code).toBe("対応内容");
+    expect(fields[2].code).toBe("添付ファイル");
+  });
+});

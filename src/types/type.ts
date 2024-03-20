@@ -1,4 +1,5 @@
 import type * as property from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/property";
+import type * as layout from "@kintone/rest-api-client/lib/src/KintoneFields/types/fieldLayout";
 
 export interface RecordNumber extends property.RecordNumber {
 	// table?: string;
@@ -178,6 +179,8 @@ export interface StatusAssignee extends property.StatusAssignee {
 	// table?: string;
 	// group?: string;
 }
+
+export interface Spacer extends layout.Spacer {}
 
 export type InSubtable =
 	| SingleLineText

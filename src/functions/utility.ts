@@ -29,19 +29,17 @@ export const generateFields = (formFields: Properties, formLayouts: Layout) => {
 	const statusFormField = Object.values(formFields).find(
 		guardFormField.isStatus,
 	);
-	if (statusFormField && statusFormField.enabled) fields.push(statusFormField);
+	if (statusFormField?.enabled) fields.push(statusFormField);
 
 	const statusAssigneeFormField = Object.values(formFields).find(
 		guardFormField.isStatusAssignee,
 	);
-	if (statusAssigneeFormField && statusAssigneeFormField.enabled)
-		fields.push(statusAssigneeFormField);
+	if (statusAssigneeFormField?.enabled) fields.push(statusAssigneeFormField);
 
 	const categoryFormField = Object.values(formFields).find(
 		guardFormField.isCategory,
 	);
-	if (categoryFormField && categoryFormField.enabled)
-		fields.push(categoryFormField);
+	if (categoryFormField?.enabled) fields.push(categoryFormField);
 
 	for (const formLayout of formLayouts) {
 		if (guardFormLayout.isRow(formLayout)) {

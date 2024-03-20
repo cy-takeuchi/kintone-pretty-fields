@@ -1,5 +1,4 @@
 import type { KintoneRestAPIClient } from "@kintone/rest-api-client";
-import type { Spacer } from "@kintone/rest-api-client/lib/src/KintoneFields/types/fieldLayout";
 import type {
 	AppID,
 	Lang,
@@ -22,7 +21,7 @@ const sortOptions = (options: {
 
 const generateFields = (formFields: Properties, formLayouts: Layout) => {
 	const fields: kintonePrettyType.OneOf[] = [];
-	const spacers: Spacer[] = [];
+	const spacers: kintonePrettyType.Spacer[] = [];
 
 	const statusFormField = Object.values(formFields).find(
 		guardFormField.isStatus,

@@ -28,6 +28,7 @@ export type {
 	Category,
 	Status,
 	StatusAssignee,
+	Spacer,
 	InSubtable,
 	InGroup,
 	OneOf,

@@ -1,126 +1,126 @@
 [
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "CREATOR",
-        "code": "作成者",
-        "size": {
-          "width": "120"
-        }
-      },
-      {
-        "type": "MODIFIER",
-        "code": "更新者",
-        "size": {
-          "width": "120"
-        }
-      },
-      {
-        "type": "CREATED_TIME",
-        "code": "作成日時",
-        "size": {
-          "width": "196"
-        }
-      },
-      {
-        "type": "UPDATED_TIME",
-        "code": "更新日時",
-        "size": {
-          "width": "196"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "DROP_DOWN",
-        "code": "公開",
-        "size": {
-          "width": "142"
-        }
-      },
-      {
-        "type": "DROP_DOWN",
-        "code": "種別",
-        "size": {
-          "width": "196"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "MULTI_LINE_TEXT",
-        "code": "質問",
-        "size": {
-          "width": "697",
-          "innerHeight": "93"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "MULTI_LINE_TEXT",
-        "code": "回答",
-        "size": {
-          "width": "697",
-          "innerHeight": "181"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "MULTI_LINE_TEXT",
-        "code": "文字列__複数行__1",
-        "size": {
-          "width": "697",
-          "innerHeight": "84"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "FILE",
-        "code": "添付ファイル_0",
-        "size": {
-          "width": "209"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "REFERENCE_TABLE",
-        "code": "該当問い合わせ"
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "NUMBER",
-        "code": "該当問い合わせ紐付けキー",
-        "size": {
-          "width": "209"
-        }
-      }
-    ]
-  }
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "CREATOR",
+				"code": "作成者",
+				"size": {
+					"width": "120"
+				}
+			},
+			{
+				"type": "MODIFIER",
+				"code": "更新者",
+				"size": {
+					"width": "120"
+				}
+			},
+			{
+				"type": "CREATED_TIME",
+				"code": "作成日時",
+				"size": {
+					"width": "196"
+				}
+			},
+			{
+				"type": "UPDATED_TIME",
+				"code": "更新日時",
+				"size": {
+					"width": "196"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "DROP_DOWN",
+				"code": "公開",
+				"size": {
+					"width": "142"
+				}
+			},
+			{
+				"type": "DROP_DOWN",
+				"code": "種別",
+				"size": {
+					"width": "196"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "MULTI_LINE_TEXT",
+				"code": "質問",
+				"size": {
+					"width": "697",
+					"innerHeight": "93"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "MULTI_LINE_TEXT",
+				"code": "回答",
+				"size": {
+					"width": "697",
+					"innerHeight": "181"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "MULTI_LINE_TEXT",
+				"code": "文字列__複数行__1",
+				"size": {
+					"width": "697",
+					"innerHeight": "84"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "FILE",
+				"code": "添付ファイル_0",
+				"size": {
+					"width": "209"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "REFERENCE_TABLE",
+				"code": "該当問い合わせ"
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "NUMBER",
+				"code": "該当問い合わせ紐付けキー",
+				"size": {
+					"width": "209"
+				}
+			}
+		]
+	}
 ]

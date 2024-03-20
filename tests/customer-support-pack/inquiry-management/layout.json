@@ -1,133 +1,133 @@
 [
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "LABEL",
-        "label": "<div><b><font size=\"4\">問合せ管理</font></b></div>",
-        "size": {
-          "width": "158"
-        }
-      },
-      {
-        "type": "RECORD_NUMBER",
-        "code": "レコード番号",
-        "size": {
-          "width": "120"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "SINGLE_LINE_TEXT",
-        "code": "ルックアップ",
-        "size": {
-          "width": "416"
-        }
-      },
-      {
-        "type": "SINGLE_LINE_TEXT",
-        "code": "ご担当者名",
-        "size": {
-          "width": "189"
-        }
-      },
-      {
-        "type": "LINK",
-        "code": "電話番号",
-        "size": {
-          "width": "171"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "USER_SELECT",
-        "code": "対応担当者",
-        "size": {
-          "width": "344"
-        }
-      },
-      {
-        "type": "DATETIME",
-        "code": "受付日時",
-        "size": {
-          "width": "199"
-        }
-      },
-      {
-        "type": "DROP_DOWN",
-        "code": "対応状況",
-        "size": {
-          "width": "231"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "RADIO_BUTTON",
-        "code": "問い合わせ種別",
-        "size": {
-          "width": "658"
-        }
-      },
-      {
-        "type": "DATE",
-        "code": "期限",
-        "size": {
-          "width": "119"
-        }
-      }
-    ]
-  },
-  {
-    "type": "ROW",
-    "fields": [
-      {
-        "type": "MULTI_LINE_TEXT",
-        "code": "詳細",
-        "size": {
-          "width": "777",
-          "innerHeight": "84"
-        }
-      }
-    ]
-  },
-  {
-    "type": "SUBTABLE",
-    "code": "対応詳細",
-    "fields": [
-      {
-        "type": "DATETIME",
-        "code": "対応日時",
-        "size": {
-          "width": "196"
-        }
-      },
-      {
-        "type": "MULTI_LINE_TEXT",
-        "code": "対応内容",
-        "size": {
-          "width": "364",
-          "innerHeight": "84"
-        }
-      },
-      {
-        "type": "FILE",
-        "code": "添付ファイル",
-        "size": {
-          "width": "214"
-        }
-      }
-    ]
-  }
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "LABEL",
+				"label": "<div><b><font size=\"4\">問合せ管理</font></b></div>",
+				"size": {
+					"width": "158"
+				}
+			},
+			{
+				"type": "RECORD_NUMBER",
+				"code": "レコード番号",
+				"size": {
+					"width": "120"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "SINGLE_LINE_TEXT",
+				"code": "ルックアップ",
+				"size": {
+					"width": "416"
+				}
+			},
+			{
+				"type": "SINGLE_LINE_TEXT",
+				"code": "ご担当者名",
+				"size": {
+					"width": "189"
+				}
+			},
+			{
+				"type": "LINK",
+				"code": "電話番号",
+				"size": {
+					"width": "171"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "USER_SELECT",
+				"code": "対応担当者",
+				"size": {
+					"width": "344"
+				}
+			},
+			{
+				"type": "DATETIME",
+				"code": "受付日時",
+				"size": {
+					"width": "199"
+				}
+			},
+			{
+				"type": "DROP_DOWN",
+				"code": "対応状況",
+				"size": {
+					"width": "231"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "RADIO_BUTTON",
+				"code": "問い合わせ種別",
+				"size": {
+					"width": "658"
+				}
+			},
+			{
+				"type": "DATE",
+				"code": "期限",
+				"size": {
+					"width": "119"
+				}
+			}
+		]
+	},
+	{
+		"type": "ROW",
+		"fields": [
+			{
+				"type": "MULTI_LINE_TEXT",
+				"code": "詳細",
+				"size": {
+					"width": "777",
+					"innerHeight": "84"
+				}
+			}
+		]
+	},
+	{
+		"type": "SUBTABLE",
+		"code": "対応詳細",
+		"fields": [
+			{
+				"type": "DATETIME",
+				"code": "対応日時",
+				"size": {
+					"width": "196"
+				}
+			},
+			{
+				"type": "MULTI_LINE_TEXT",
+				"code": "対応内容",
+				"size": {
+					"width": "364",
+					"innerHeight": "84"
+				}
+			},
+			{
+				"type": "FILE",
+				"code": "添付ファイル",
+				"size": {
+					"width": "214"
+				}
+			}
+		]
+	}
 ]

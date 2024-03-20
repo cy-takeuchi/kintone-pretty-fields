@@ -1,169 +1,169 @@
 {
-  "添付ファイル_0": {
-    "type": "FILE",
-    "code": "添付ファイル_0",
-    "label": "添付ファイル",
-    "noLabel": false,
-    "required": false,
-    "thumbnailSize": "150"
-  },
-  "レコード番号": {
-    "type": "RECORD_NUMBER",
-    "code": "レコード番号",
-    "label": "レコード番号",
-    "noLabel": false
-  },
-  "作業者": {
-    "type": "STATUS_ASSIGNEE",
-    "code": "作業者",
-    "label": "作業者",
-    "enabled": false
-  },
-  "更新者": {
-    "type": "MODIFIER",
-    "code": "更新者",
-    "label": "更新者",
-    "noLabel": false
-  },
-  "作成者": {
-    "type": "CREATOR",
-    "code": "作成者",
-    "label": "作成者",
-    "noLabel": false
-  },
-  "ステータス": {
-    "type": "STATUS",
-    "code": "ステータス",
-    "label": "ステータス",
-    "enabled": false
-  },
-  "該当問い合わせ": {
-    "type": "REFERENCE_TABLE",
-    "code": "該当問い合わせ",
-    "label": "該当問い合わせ",
-    "noLabel": false,
-    "referenceTable": {
-      "relatedApp": {
-        "app": "2290",
-        "code": ""
-      },
-      "condition": {
-        "field": "該当問い合わせ紐付けキー",
-        "relatedField": "レコード番号"
-      },
-      "filterCond": "",
-      "displayFields": ["ルックアップ", "受付日時", "問い合わせ種別", "詳細"],
-      "sort": "レコード番号 desc",
-      "size": "5"
-    }
-  },
-  "更新日時": {
-    "type": "UPDATED_TIME",
-    "code": "更新日時",
-    "label": "更新日時",
-    "noLabel": false
-  },
-  "文字列__複数行__1": {
-    "type": "MULTI_LINE_TEXT",
-    "code": "文字列__複数行__1",
-    "label": "関連する質問・リンク",
-    "noLabel": false,
-    "required": false,
-    "defaultValue": ""
-  },
-  "カテゴリー": {
-    "type": "CATEGORY",
-    "code": "カテゴリー",
-    "label": "カテゴリー",
-    "enabled": false
-  },
-  "質問": {
-    "type": "MULTI_LINE_TEXT",
-    "code": "質問",
-    "label": "質問",
-    "noLabel": false,
-    "required": false,
-    "defaultValue": ""
-  },
-  "公開": {
-    "type": "DROP_DOWN",
-    "code": "公開",
-    "label": "公開",
-    "noLabel": false,
-    "required": false,
-    "options": {
-      "公開": {
-        "label": "公開",
-        "index": "2"
-      },
-      "対応中": {
-        "label": "対応中",
-        "index": "0"
-      },
-      "非公開": {
-        "label": "非公開",
-        "index": "1"
-      }
-    },
-    "defaultValue": "対応中"
-  },
-  "種別": {
-    "type": "DROP_DOWN",
-    "code": "種別",
-    "label": "種別",
-    "noLabel": false,
-    "required": false,
-    "options": {
-      "サービス・コンテンツについて": {
-        "label": "サービス・コンテンツについて",
-        "index": "3"
-      },
-      "お客様対応について": {
-        "label": "お客様対応について",
-        "index": "2"
-      },
-      "受発注について": {
-        "label": "受発注について",
-        "index": "1"
-      },
-      "製品について": {
-        "label": "製品について",
-        "index": "0"
-      },
-      "その他": {
-        "label": "その他",
-        "index": "4"
-      }
-    },
-    "defaultValue": ""
-  },
-  "該当問い合わせ紐付けキー": {
-    "type": "NUMBER",
-    "code": "該当問い合わせ紐付けキー",
-    "label": "該当問い合わせ紐付けキー",
-    "noLabel": false,
-    "required": false,
-    "minValue": "",
-    "maxValue": "",
-    "digit": false,
-    "unique": false,
-    "defaultValue": "",
-    "displayScale": "",
-    "unit": "",
-    "unitPosition": "BEFORE"
-  },
-  "回答": {
-    "type": "MULTI_LINE_TEXT",
-    "code": "回答",
-    "label": "回答",
-    "noLabel": false,
-    "required": false,
-    "defaultValue": ""
-  },
-  "作成日時": {
-    "type": "CREATED_TIME",
-    "code": "作成日時",
-    "label": "作成日時",
-    "noLabel": false
-  }
+	"添付ファイル_0": {
+		"type": "FILE",
+		"code": "添付ファイル_0",
+		"label": "添付ファイル",
+		"noLabel": false,
+		"required": false,
+		"thumbnailSize": "150"
+	},
+	"レコード番号": {
+		"type": "RECORD_NUMBER",
+		"code": "レコード番号",
+		"label": "レコード番号",
+		"noLabel": false
+	},
+	"作業者": {
+		"type": "STATUS_ASSIGNEE",
+		"code": "作業者",
+		"label": "作業者",
+		"enabled": false
+	},
+	"更新者": {
+		"type": "MODIFIER",
+		"code": "更新者",
+		"label": "更新者",
+		"noLabel": false
+	},
+	"作成者": {
+		"type": "CREATOR",
+		"code": "作成者",
+		"label": "作成者",
+		"noLabel": false
+	},
+	"ステータス": {
+		"type": "STATUS",
+		"code": "ステータス",
+		"label": "ステータス",
+		"enabled": false
+	},
+	"該当問い合わせ": {
+		"type": "REFERENCE_TABLE",
+		"code": "該当問い合わせ",
+		"label": "該当問い合わせ",
+		"noLabel": false,
+		"referenceTable": {
+			"relatedApp": {
+				"app": "2290",
+				"code": ""
+			},
+			"condition": {
+				"field": "該当問い合わせ紐付けキー",
+				"relatedField": "レコード番号"
+			},
+			"filterCond": "",
+			"displayFields": ["ルックアップ", "受付日時", "問い合わせ種別", "詳細"],
+			"sort": "レコード番号 desc",
+			"size": "5"
+		}
+	},
+	"更新日時": {
+		"type": "UPDATED_TIME",
+		"code": "更新日時",
+		"label": "更新日時",
+		"noLabel": false
+	},
+	"文字列__複数行__1": {
+		"type": "MULTI_LINE_TEXT",
+		"code": "文字列__複数行__1",
+		"label": "関連する質問・リンク",
+		"noLabel": false,
+		"required": false,
+		"defaultValue": ""
+	},
+	"カテゴリー": {
+		"type": "CATEGORY",
+		"code": "カテゴリー",
+		"label": "カテゴリー",
+		"enabled": false
+	},
+	"質問": {
+		"type": "MULTI_LINE_TEXT",
+		"code": "質問",
+		"label": "質問",
+		"noLabel": false,
+		"required": false,
+		"defaultValue": ""
+	},
+	"公開": {
+		"type": "DROP_DOWN",
+		"code": "公開",
+		"label": "公開",
+		"noLabel": false,
+		"required": false,
+		"options": {
+			"公開": {
+				"label": "公開",
+				"index": "2"
+			},
+			"対応中": {
+				"label": "対応中",
+				"index": "0"
+			},
+			"非公開": {
+				"label": "非公開",
+				"index": "1"
+			}
+		},
+		"defaultValue": "対応中"
+	},
+	"種別": {
+		"type": "DROP_DOWN",
+		"code": "種別",
+		"label": "種別",
+		"noLabel": false,
+		"required": false,
+		"options": {
+			"サービス・コンテンツについて": {
+				"label": "サービス・コンテンツについて",
+				"index": "3"
+			},
+			"お客様対応について": {
+				"label": "お客様対応について",
+				"index": "2"
+			},
+			"受発注について": {
+				"label": "受発注について",
+				"index": "1"
+			},
+			"製品について": {
+				"label": "製品について",
+				"index": "0"
+			},
+			"その他": {
+				"label": "その他",
+				"index": "4"
+			}
+		},
+		"defaultValue": ""
+	},
+	"該当問い合わせ紐付けキー": {
+		"type": "NUMBER",
+		"code": "該当問い合わせ紐付けキー",
+		"label": "該当問い合わせ紐付けキー",
+		"noLabel": false,
+		"required": false,
+		"minValue": "",
+		"maxValue": "",
+		"digit": false,
+		"unique": false,
+		"defaultValue": "",
+		"displayScale": "",
+		"unit": "",
+		"unitPosition": "BEFORE"
+	},
+	"回答": {
+		"type": "MULTI_LINE_TEXT",
+		"code": "回答",
+		"label": "回答",
+		"noLabel": false,
+		"required": false,
+		"defaultValue": ""
+	},
+	"作成日時": {
+		"type": "CREATED_TIME",
+		"code": "作成日時",
+		"label": "作成日時",
+		"noLabel": false
+	}
 }

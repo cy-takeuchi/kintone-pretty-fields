@@ -38,13 +38,15 @@
     "build": "tsc && vite build",
     "watch": "tsc && vite build --watch",
     "prepare": "npm run build",
-    "test": "vitest"
+    "test": "vitest",
+    "check": "biome check --apply ./src ./tests"
   },
   "dependencies": {
     "@kintone/rest-api-client": "^5.0.8",
     "kintone-typeguard": "^0.9.4"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.6.1",
     "@types/node": "^20.11.19",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",

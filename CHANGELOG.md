@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.8.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.7.1...v0.8.0) (2024-03-20)
+
+
+### Features
+
+* 関数名の変更 ([0e3f7e6](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/0e3f7e65ea04e9e625eaf0eb59c643eabbbe85d6))
+
+
+### Bug Fixes
+
+* add vscode settings ([d266208](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/d2662086aac4dbd2b1ba91cc9e0ae296843fb0fc))
+* biome formatter ([e4e8f7f](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/e4e8f7f143cad3722dfa52d0efbe3f9e9c556630))
+* biome lint ([1964d71](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/1964d711acfce2d6a1c9f2597029ee0f075dac52))
+* biome の GitHub Actions 追加 ([842c5d9](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/842c5d920a64661d2fd9546fae1b9e1fd54a5494))
+* remove prettier ([29ad3d7](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/29ad3d75d4edef132a4f22ddc3fbdab27963383d))
+
 ## [0.7.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.7.0...v0.7.1) (2024-03-04)
 
 

@@ -6,9 +6,7 @@ import type {
 	Layout,
 	Properties,
 } from "@kintone/rest-api-client/lib/src/client/types";
-
 import { guardFormField, guardFormLayout } from "kintone-typeguard";
-
 import type * as kintonePrettyType from "../exportTypes/formField";
 import * as kintonePrettyTypeGuard from "../functions/formField";
 

@@ -20,7 +20,7 @@ const sortOptions = (options: {
 		.sort((a, b) => Number(a.index) - Number(b.index))
 		.map(({ label }) => label);
 
-export const generateFields = (formFields: Properties, formLayouts: Layout) => {
+const generateFields = (formFields: Properties, formLayouts: Layout) => {
 	const fields: kintonePrettyType.OneOf[] = [];
 	const spacers: Spacer[] = [];
 
@@ -265,4 +265,4 @@ const get = async ({
 	return generateFields(formFields, formLayouts);
 };
 
-export { get };
+export { get, generateFields };

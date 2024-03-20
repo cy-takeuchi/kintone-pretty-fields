@@ -146,3 +146,6 @@ export const isInGroup = <T extends kintonePrettyType.OneOf>(
 export const isInSubtable = <T extends kintonePrettyType.OneOf>(
 	field: T,
 ): field is T & { table: string } => "table" in field;
+export const isNotInSubtable = <T extends kintonePrettyType.OneOf>(
+	field: T,
+): field is T => !("table" in field);

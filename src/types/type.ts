@@ -1,136 +1,140 @@
-import type * as layout from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/layout";
-import type * as property from "@kintone/rest-api-client/lib/src/KintoneFields/exportTypes/property";
+import type {
+	KintoneFormFieldProperty,
+	KintoneFormLayout,
+} from "@kintone/rest-api-client";
 
-export interface RecordNumber extends property.RecordNumber {
+export interface RecordNumber extends KintoneFormFieldProperty.RecordNumber {
 	// table?: string;
 	group?: string;
 }
 
-export interface Creator extends property.Creator {
+export interface Creator extends KintoneFormFieldProperty.Creator {
 	// table?: string;
 	group?: string;
 }
 
-export interface CreatedTime extends property.CreatedTime {
+export interface CreatedTime extends KintoneFormFieldProperty.CreatedTime {
 	// table?: string;
 	group?: string;
 }
 
-export interface Modifier extends property.Modifier {
+export interface Modifier extends KintoneFormFieldProperty.Modifier {
 	// table?: string;
 	group?: string;
 }
 
-export interface UpdatedTime extends property.UpdatedTime {
+export interface UpdatedTime extends KintoneFormFieldProperty.UpdatedTime {
 	// table?: string;
 	group?: string;
 }
 
-export interface SingleLineText extends property.SingleLineText {
+export interface SingleLineText
+	extends KintoneFormFieldProperty.SingleLineText {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface MultiLineText extends property.MultiLineText {
+export interface MultiLineText extends KintoneFormFieldProperty.MultiLineText {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface RichText extends property.RichText {
+export interface RichText extends KintoneFormFieldProperty.RichText {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface Number extends property.Number {
+export interface Number extends KintoneFormFieldProperty.Number {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface Calc extends property.Calc {
+export interface Calc extends KintoneFormFieldProperty.Calc {
 	table?: string;
 	group?: string;
 }
 
-export interface CheckBox extends property.CheckBox {
+export interface CheckBox extends KintoneFormFieldProperty.CheckBox {
 	table?: string;
 	group?: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
 
-export interface RadioButton extends property.RadioButton {
+export interface RadioButton extends KintoneFormFieldProperty.RadioButton {
 	table?: string;
 	group?: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
 
-export interface MultiSelect extends property.MultiSelect {
+export interface MultiSelect extends KintoneFormFieldProperty.MultiSelect {
 	table?: string;
 	group?: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
 
-export interface Dropdown extends property.Dropdown {
+export interface Dropdown extends KintoneFormFieldProperty.Dropdown {
 	table?: string;
 	group?: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
 
-export interface UserSelect extends property.UserSelect {
+export interface UserSelect extends KintoneFormFieldProperty.UserSelect {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface OrganizationSelect extends property.OrganizationSelect {
+export interface OrganizationSelect
+	extends KintoneFormFieldProperty.OrganizationSelect {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface GroupSelect extends property.GroupSelect {
+export interface GroupSelect extends KintoneFormFieldProperty.GroupSelect {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface Date extends property.Date {
+export interface Date extends KintoneFormFieldProperty.Date {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface Time extends property.Time {
+export interface Time extends KintoneFormFieldProperty.Time {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface DateTime extends property.DateTime {
+export interface DateTime extends KintoneFormFieldProperty.DateTime {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface Link extends property.Link {
+export interface Link extends KintoneFormFieldProperty.Link {
 	table?: string;
 	group?: string;
 	isLookupCopy?: true;
 }
 
-export interface File extends property.File {
+export interface File extends KintoneFormFieldProperty.File {
 	table?: string;
 	group?: string;
 }
 
-export interface Lookup extends property.Lookup {
+export interface Lookup extends KintoneFormFieldProperty.Lookup {
 	table?: string;
 	group?: string;
 }
@@ -160,27 +164,29 @@ export type Group<
 	fields: T;
 };
 
-export interface ReferenceTable extends property.ReferenceTable {
+export interface ReferenceTable
+	extends KintoneFormFieldProperty.ReferenceTable {
 	// table?: string;
 	group?: string;
 }
 
-export interface Category extends property.Category {
+export interface Category extends KintoneFormFieldProperty.Category {
 	// table?: string;
 	// group?: string;
 }
 
-export interface Status extends property.Status {
+export interface Status extends KintoneFormFieldProperty.Status {
 	// table?: string;
 	// group?: string;
 }
 
-export interface StatusAssignee extends property.StatusAssignee {
+export interface StatusAssignee
+	extends KintoneFormFieldProperty.StatusAssignee {
 	// table?: string;
 	// group?: string;
 }
 
-export interface Spacer extends layout.Field.Spacer {}
+export interface Spacer extends KintoneFormLayout.Field.Spacer {}
 
 export type InSubtable =
 	| SingleLineText
@@ -255,10 +261,6 @@ export type OneOf =
 	| OrganizationSelect
 	| GroupSelect
 	| ReferenceTable
-	| Group<{
-			[fieldCode: string]: InGroup;
-	  }>
+	| Group<{ [fieldCode: string]: InGroup }>
 	| Lookup
-	| Subtable<{
-			[fieldCode: string]: InSubtable;
-	  }>;
+	| Subtable<{ [fieldCode: string]: InSubtable }>;

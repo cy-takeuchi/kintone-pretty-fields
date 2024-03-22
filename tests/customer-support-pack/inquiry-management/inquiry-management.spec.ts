@@ -1,17 +1,16 @@
 import type {
-	Layout,
-	Properties,
-} from "@kintone/rest-api-client/lib/src/client/types";
+	KintoneFormFieldProperty,
+	KintoneFormLayout,
+} from "@kintone/rest-api-client";
 import { describe, expect, test } from "vitest";
 import { generateFields } from "../../../src/functions/utility";
 import { kintonePrettyFields } from "../../../src/index";
-
 import formFields from "./flelds.json";
 import formLayouts from "./layout.json";
 
 const { fields: allFields } = generateFields(
-	formFields as Properties,
-	formLayouts as Layout,
+	formFields as { [fieldCode: string]: KintoneFormFieldProperty.OneOf },
+	formLayouts as KintoneFormLayout.OneOf[],
 );
 
 describe("全フィールド", () => {

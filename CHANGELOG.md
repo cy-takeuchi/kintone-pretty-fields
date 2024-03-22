@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.0...v0.9.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* import type ([3e0581c](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/3e0581cb4817c61857780c3a62f82c97e44b570b))
+* type guard ([6e7d415](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/6e7d415d68b97ec524a7e5627e562f6afc0d452e))
+
 ## [0.9.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.8.0...v0.9.0) (2024-03-20)
 
 

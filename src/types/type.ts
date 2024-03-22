@@ -189,24 +189,24 @@ export interface StatusAssignee
 export interface Spacer extends KintoneFormLayout.Field.Spacer {}
 
 export type InSubtable =
-	| SingleLineText
-	| Number
-	| Calc
-	| MultiLineText
-	| RichText
-	| Link
-	| CheckBox
-	| RadioButton
-	| Dropdown
-	| MultiSelect
-	| File
-	| Date
-	| Time
-	| DateTime
-	| UserSelect
-	| OrganizationSelect
-	| GroupSelect
-	| Lookup;
+	| (Omit<SingleLineText, "group"> & { table: string })
+	| (Omit<Number, "group"> & { table: string })
+	| (Omit<Calc, "group"> & { table: string })
+	| (Omit<MultiLineText, "group"> & { table: string })
+	| (Omit<RichText, "group"> & { table: string })
+	| (Omit<Link, "group"> & { table: string })
+	| (Omit<CheckBox, "group"> & { table: string })
+	| (Omit<RadioButton, "group"> & { table: string })
+	| (Omit<Dropdown, "group"> & { table: string })
+	| (Omit<MultiSelect, "group"> & { table: string })
+	| (Omit<File, "group"> & { table: string })
+	| (Omit<Date, "group"> & { table: string })
+	| (Omit<Time, "group"> & { table: string })
+	| (Omit<DateTime, "group"> & { table: string })
+	| (Omit<UserSelect, "group"> & { table: string })
+	| (Omit<OrganizationSelect, "group"> & { table: string })
+	| (Omit<GroupSelect, "group"> & { table: string })
+	| (Omit<Lookup, "group"> & { table: string });
 
 export type InGroup =
 	| RecordNumber

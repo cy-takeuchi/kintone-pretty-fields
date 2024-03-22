@@ -142,10 +142,10 @@ export const isLookupCopy = (
 };
 export const isInGroup = <T extends kintonePrettyType.OneOf>(
 	field: T,
-): field is T & { group: string } => "group" in field;
+): field is Extract<T, kintonePrettyType.InGroup> => "group" in field;
 export const isInSubtable = <T extends kintonePrettyType.OneOf>(
 	field: T,
-): field is T & { table: string } => "table" in field;
+): field is Extract<T, kintonePrettyType.InSubtable> => "table" in field;
 export const isNotInSubtable = <T extends kintonePrettyType.OneOf>(
 	field: T,
 ): field is T => !("table" in field);

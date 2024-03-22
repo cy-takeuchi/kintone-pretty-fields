@@ -1,13 +1,15 @@
-import type { KintoneRestAPIClient } from "@kintone/rest-api-client";
 import type {
-	AppID,
-	Lang,
-	Layout,
-	Properties,
-} from "@kintone/rest-api-client/lib/src/client/types";
+	KintoneFormFieldProperty,
+	KintoneFormLayout,
+	KintoneRestAPIClient,
+} from "@kintone/rest-api-client";
 import { guardFormField, guardFormLayout } from "kintone-typeguard";
 import type * as kintonePrettyType from "../exportTypes/formField";
 import * as kintonePrettyTypeGuard from "../functions/formField";
+
+// https://github.com/kintone/js-sdk/blob/master/packages/rest-api-client/src/client/types/app/index.ts
+type Lang = "ja" | "en" | "zh" | "user" | "default";
+type AppID = string | number;
 
 const sortOptions = (options: {
 	[optionName: string]: {
@@ -19,7 +21,12 @@ const sortOptions = (options: {
 		.sort((a, b) => Number(a.index) - Number(b.index))
 		.map(({ label }) => label);
 
-const generateFields = (formFields: Properties, formLayouts: Layout) => {
+const generateFields = (
+	formFields: {
+		[fieldCode: string]: KintoneFormFieldProperty.OneOf;
+	},
+	formLayouts: KintoneFormLayout.OneOf[],
+) => {
 	const fields: kintonePrettyType.OneOf[] = [];
 	const spacers: kintonePrettyType.Spacer[] = [];
 

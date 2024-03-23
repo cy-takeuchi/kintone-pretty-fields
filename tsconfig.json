@@ -5,7 +5,8 @@
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "./dist",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*", "package.json"]
 }

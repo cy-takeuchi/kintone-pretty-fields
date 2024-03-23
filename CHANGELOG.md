@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.1...v0.9.2) (2024-03-23)
+
+
+### Bug Fixes
+
+* biome format ([72e5dda](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/72e5dda1f3381ab40fbc83114a56daca86183938))
+
 ## [0.9.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.0...v0.9.1) (2024-03-22)
 
 

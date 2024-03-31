@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.1...v0.9.2) (2024-03-31)
+
+
+### Bug Fixes
+
+* biome format ([72e5dda](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/72e5dda1f3381ab40fbc83114a56daca86183938))
+* bump the group-dependencies group with 4 updates ([96eb530](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/96eb5303647790f7b31d268c70954fedcad63563))
+
 ## [0.9.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.0...v0.9.1) (2024-03-22)
 
 

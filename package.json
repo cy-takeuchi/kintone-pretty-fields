@@ -4,7 +4,7 @@
   "files": [
     "dist"
   ],
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Get kintone form fields in a pretty format.",
   "repository": {
     "type": "git",

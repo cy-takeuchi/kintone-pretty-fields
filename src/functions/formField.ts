@@ -1,4 +1,5 @@
 import type * as kintonePrettyType from "../exportTypes/formField";
+import type { SingleLineTextInTable } from "../types/type";
 
 export const isRecordNumber = (
 	field: kintonePrettyType.OneOf,
@@ -17,7 +18,7 @@ export const isUpdatedTime = (
 ): field is kintonePrettyType.UpdatedTime => field.type === "UPDATED_TIME";
 export const isSingleLineText = (
 	field: kintonePrettyType.OneOf,
-): field is kintonePrettyType.SingleLineText =>
+): field is kintonePrettyType.SingleLineText | SingleLineTextInTable =>
 	field.type === "SINGLE_LINE_TEXT";
 export const isMultiLineText = (
 	field: kintonePrettyType.OneOf,

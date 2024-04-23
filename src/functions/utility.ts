@@ -94,16 +94,16 @@ const generateFields = (
 					guardFormField.isRadioButton(subFormField)
 				) {
 					const sortedOptions = sortOptions(subFormField.options);
-					subField[subFormField.code] = {
-						...subFormField,
-						table,
-						sortedOptions,
-					};
+					// subField[subFormField.code] = {
+					// 	...subFormField,
+					// 	table,
+					// 	sortedOptions,
+					// };
 					fields.push({ ...subFormField, table, sortedOptions });
 					continue;
 				}
 
-				subField[subFormField.code] = { ...subFormField, table };
+				// subField[subFormField.code] = { ...subFormField, table };
 
 				fields.push({ ...subFormField, table });
 			}

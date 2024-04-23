@@ -34,10 +34,20 @@ export interface SingleLineText
 	group?: string;
 	isLookupCopy?: true;
 }
+export interface SingleLineTextInTable
+	extends KintoneFormFieldProperty.SingleLineText {
+	table: string;
+	isLookupCopy?: true;
+}
 
 export interface MultiLineText extends KintoneFormFieldProperty.MultiLineText {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface MultiLineTextInTable
+	extends KintoneFormFieldProperty.MultiLineText {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -46,10 +56,18 @@ export interface RichText extends KintoneFormFieldProperty.RichText {
 	group?: string;
 	isLookupCopy?: true;
 }
+export interface RichTextInTable extends KintoneFormFieldProperty.RichText {
+	table: string;
+	isLookupCopy?: true;
+}
 
 export interface Number extends KintoneFormFieldProperty.Number {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface NumberInTable extends KintoneFormFieldProperty.Number {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -57,10 +75,18 @@ export interface Calc extends KintoneFormFieldProperty.Calc {
 	table?: string;
 	group?: string;
 }
+export interface CalcInTable extends KintoneFormFieldProperty.Calc {
+	table: string;
+}
 
 export interface CheckBox extends KintoneFormFieldProperty.CheckBox {
 	table?: string;
 	group?: string;
+	sortedOptions: string[];
+	isLookupCopy?: true;
+}
+export interface CheckBoxInTable extends KintoneFormFieldProperty.CheckBox {
+	table: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
@@ -71,10 +97,22 @@ export interface RadioButton extends KintoneFormFieldProperty.RadioButton {
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
+export interface RadioButtonInTable
+	extends KintoneFormFieldProperty.RadioButton {
+	table: string;
+	sortedOptions: string[];
+	isLookupCopy?: true;
+}
 
 export interface MultiSelect extends KintoneFormFieldProperty.MultiSelect {
 	table?: string;
 	group?: string;
+	sortedOptions: string[];
+	isLookupCopy?: true;
+}
+export interface MultiSelectInTable
+	extends KintoneFormFieldProperty.MultiSelect {
+	table: string;
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
@@ -85,10 +123,19 @@ export interface Dropdown extends KintoneFormFieldProperty.Dropdown {
 	sortedOptions: string[];
 	isLookupCopy?: true;
 }
+export interface DropdownInTable extends KintoneFormFieldProperty.Dropdown {
+	table: string;
+	sortedOptions: string[];
+	isLookupCopy?: true;
+}
 
 export interface UserSelect extends KintoneFormFieldProperty.UserSelect {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface UserSelectInTable extends KintoneFormFieldProperty.UserSelect {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -98,10 +145,20 @@ export interface OrganizationSelect
 	group?: string;
 	isLookupCopy?: true;
 }
+export interface OrganizationSelectInTable
+	extends KintoneFormFieldProperty.OrganizationSelect {
+	table: string;
+	isLookupCopy?: true;
+}
 
 export interface GroupSelect extends KintoneFormFieldProperty.GroupSelect {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface GroupSelectInTable
+	extends KintoneFormFieldProperty.GroupSelect {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -110,10 +167,18 @@ export interface Date extends KintoneFormFieldProperty.Date {
 	group?: string;
 	isLookupCopy?: true;
 }
+export interface DateInTable extends KintoneFormFieldProperty.Date {
+	table: string;
+	isLookupCopy?: true;
+}
 
 export interface Time extends KintoneFormFieldProperty.Time {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface TimeInTable extends KintoneFormFieldProperty.Time {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -122,10 +187,18 @@ export interface DateTime extends KintoneFormFieldProperty.DateTime {
 	group?: string;
 	isLookupCopy?: true;
 }
+export interface DateTimeInTable extends KintoneFormFieldProperty.DateTime {
+	table: string;
+	isLookupCopy?: true;
+}
 
 export interface Link extends KintoneFormFieldProperty.Link {
 	table?: string;
 	group?: string;
+	isLookupCopy?: true;
+}
+export interface LinkInTable extends Link {
+	table: string;
 	isLookupCopy?: true;
 }
 
@@ -133,10 +206,16 @@ export interface File extends KintoneFormFieldProperty.File {
 	table?: string;
 	group?: string;
 }
+export interface FileInTable extends KintoneFormFieldProperty.File {
+	table: string;
+}
 
 export interface Lookup extends KintoneFormFieldProperty.Lookup {
 	table?: string;
 	group?: string;
+}
+export interface LookupInTable extends Lookup {
+	table: string;
 }
 
 export type Subtable<
@@ -189,24 +268,24 @@ export interface StatusAssignee
 export interface Spacer extends KintoneFormLayout.Field.Spacer {}
 
 export type InSubtable =
-	| SingleLineText
-	| Number
-	| Calc
-	| MultiLineText
-	| RichText
-	| Link
-	| CheckBox
-	| RadioButton
-	| Dropdown
-	| MultiSelect
-	| File
-	| Date
-	| Time
-	| DateTime
-	| UserSelect
-	| OrganizationSelect
-	| GroupSelect
-	| Lookup;
+	| SingleLineTextInTable
+	| NumberInTable
+	| CalcInTable
+	| MultiLineTextInTable
+	| RichTextInTable
+	| LinkInTable
+	| CheckBoxInTable
+	| RadioButtonInTable
+	| DropdownInTable
+	| MultiSelectInTable
+	| FileInTable
+	| DateInTable
+	| TimeInTable
+	| DateTimeInTable
+	| UserSelectInTable
+	| OrganizationSelectInTable
+	| GroupSelectInTable
+	| LookupInTable;
 
 export type InGroup =
 	| RecordNumber
@@ -263,4 +342,5 @@ export type OneOf =
 	| ReferenceTable
 	| Group<{ [fieldCode: string]: InGroup }>
 	| Lookup
-	| Subtable<{ [fieldCode: string]: InSubtable }>;
+	| Subtable<{ [fieldCode: string]: InSubtable }>
+	| InSubtable;

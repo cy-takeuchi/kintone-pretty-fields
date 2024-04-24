@@ -124,7 +124,7 @@ const generateFields = (
 					}
 
 					if (guardFormLayout.isSpacer(field)) {
-						spacers.push(field);
+						spacers.push({ ...field, group });
 						continue;
 					}
 

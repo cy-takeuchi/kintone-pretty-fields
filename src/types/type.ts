@@ -186,7 +186,9 @@ export interface StatusAssignee
 	// group?: string;
 }
 
-export interface Spacer extends KintoneFormLayout.Field.Spacer {}
+export interface Spacer extends KintoneFormLayout.Field.Spacer {
+	group?: string;
+}
 
 export type InSubtable =
 	| SingleLineText

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.4...v0.10.0) (2024-04-24)
+
+
+### Features
+
+* add group property to space field ([db0dd72](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/db0dd72e0506231b9b75e59fd052a00585ce1b6a))
+
 ## [0.9.4](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.9.3...v0.9.4) (2024-04-14)
 
 

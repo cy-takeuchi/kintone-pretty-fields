@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.2](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.1...v0.10.2) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump the group-dependencies group across 1 directory with 3 updates ([75a0894](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/75a0894317c9cb4159de6694fa09c9f47c1495be))
+
 ## [0.10.1](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.0...v0.10.1) (2024-05-21)
 
 

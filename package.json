@@ -43,10 +43,10 @@
   },
   "dependencies": {
     "@kintone/rest-api-client": "^5.0.8",
-    "kintone-typeguard": "^0.10.0"
+    "kintone-typeguard": "^0.12.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.0",
+    "@biomejs/biome": "1.8.1",
     "@types/node": "^20.11.19",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",

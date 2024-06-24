@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.3](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.2...v0.10.3) (2024-06-24)
+
+
+### Bug Fixes
+
+* update package ([7f9dc21](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/7f9dc21c3450c191e3bb66e21c1e98a89381694b))
+
 ## [0.10.2](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.1...v0.10.2) (2024-06-12)
 
 

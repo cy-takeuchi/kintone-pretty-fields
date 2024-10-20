@@ -46,7 +46,7 @@
     "kintone-typeguard": "^0.15.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.4",
     "@types/node": "^20.14.8",
     "rimraf": "^5.0.7",
     "typescript": "^5.5.2",

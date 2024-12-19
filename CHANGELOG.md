@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.5](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.4...v0.10.5) (2024-12-19)
+
+
+### Bug Fixes
+
+* bump @types/node from 20.14.8 to 22.5.5 ([d1fe44f](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/d1fe44fbaf3e39359d5e913ed1604765e1398ec3))
+* bump the group-dependencies group across 1 directory with 3 updates ([cf41857](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/cf41857df1a422b525920d18447f839df258c63a))
+
 ## [0.10.4](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.3...v0.10.4) (2024-09-12)
 
 

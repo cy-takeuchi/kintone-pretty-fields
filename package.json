@@ -39,7 +39,7 @@
     "watch": "tsc && vite build --watch",
     "prepare": "npm run build",
     "test": "vitest",
-    "check": "biome check --apply ./src ./tests"
+    "check": "biome check --write ./src ./tests"
   },
   "dependencies": {
     "@kintone/rest-api-client": "^6.0.0",

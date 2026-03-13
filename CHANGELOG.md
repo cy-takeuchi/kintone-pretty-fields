@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.11.0](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.6...v0.11.0) (2026-03-13)
+
+
+### Features
+
+* update dependencies and CI workflow versions ([743e0a2](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/743e0a2577aa01fbf4c627d61b4de102297fb795))
+* update dependencies and CI workflow versions ([7c1f59e](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/7c1f59e94d6fcfc482c69cdede5c1b12f490fbdc))
+* update package ([2f2687e](https://github.com/cy-takeuchi/kintone-pretty-fields/commit/2f2687e22e60d518bb412878bcc662573158e866))
+
 ## [0.10.6](https://github.com/cy-takeuchi/kintone-pretty-fields/compare/v0.10.5...v0.10.6) (2025-11-18)
 
 

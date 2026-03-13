@@ -42,8 +42,8 @@
     "check": "biome check --write ./src ./tests"
   },
   "dependencies": {
-    "@kintone/rest-api-client": "^6.1.2",
-    "kintone-typeguard": "^0.17.2"
+    "@kintone/rest-api-client": "^6.1.3",
+    "kintone-typeguard": "^0.18.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.6",

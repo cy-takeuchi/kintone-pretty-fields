@@ -2,6 +2,11 @@
 
 [![npm version](https://badge.fury.io/js/kintone-pretty-fields.svg)](https://badge.fury.io/js/kintone-pretty-fields)
 
+> [!WARNING]
+> **This package is deprecated.** Please migrate to [kisekae](https://www.npmjs.com/package/kisekae) ([GitHub](https://github.com/cy-takeuchi/jissoku/tree/main/packages/kisekae)).
+>
+> **このパッケージは非推奨です。** 今後は [kisekae](https://www.npmjs.com/package/kisekae) をご利用ください。
+
 Retrieve kintone form field([@kintone/rest-api-client](https://www.npmjs.com/package/@kintone/rest-api-client)) information in a pretty format.
 
 - [Description](#description)
